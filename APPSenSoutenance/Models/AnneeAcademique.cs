@@ -7,7 +7,7 @@ namespace APPSenSoutenance.Models
         [Key]
         public int IdAnneeAcademique { get; set; }
 
-        [Required, MaxLength(10)]
+        [Required, MaxLength(11)]
         public string LibelleAnneeAcademique { get; set; }
 
         [Required]
