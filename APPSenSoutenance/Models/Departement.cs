@@ -7,7 +7,7 @@ namespace AppSenSoutenance.Models
         [Key]
         public int IdDepartement { get; set; }
 
-        [Required, MaxLength(80)]
+        [Required, MaxLength(81)]
         public string LibelleDepartement { get; set; }
     }
 }

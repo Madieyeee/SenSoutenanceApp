@@ -5,7 +5,7 @@ namespace AppSenSoutenance.Models
 {
     public class Candidat : Utilisateur
     {
-        [Required, MaxLength(20)]
+        [Required, MaxLength(22)]
         public string MatriculeCandidat { get; set; }
     }
 }
