@@ -8,15 +8,32 @@ using System.Windows.Forms;
 
 namespace APPSenSoutenance
 {
+    /// <summary>
+    /// Formulaire principal MDI (Multiple Document Interface) de l'application
+    /// Gère l'affichage des formulaires enfants et la navigation
+    /// </summary>
     public partial class frmMDI : Form
+
+    
     {
+
+        /// <summary>
+        /// Profil de l'utilisateur connecté (Admin, User, etc.)
+        /// </summary>
+        
         public string profil;
+
+        /// <summary>
+        /// Initialise une nouvelle instance du formulaire MDI
+        /// </summary>
         public frmMDI()
         {
             InitializeComponent();
         }
 
-        //Methode permettant de fermer toutes les fenetres enfants ouvertes
+        /// <summary>
+        ///Methode permettant de fermer toutes les fenetres enfants ouvertes
+        ///</summary>
         private void fermer()
         {
             Form[] charr = this.MdiChildren;
@@ -30,7 +47,10 @@ namespace APPSenSoutenance
         }
 
 
-
+        /// <summary>
+        /// Gère la déconnexion de l'utilisateur
+        /// Ferme tous les formulaires enfants et affiche l'écran de connexion
+        /// </summary>
         private void seDeconnecterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fermer();
@@ -39,11 +59,17 @@ namespace APPSenSoutenance
             this.Close();
         }
 
+        /// <summary>
+        /// Ouvre le formulaire de gestion des années académiques
+        /// </summary>
         private void quitterToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>
+        /// Ouvre le formulaire de gestion des années académiques
+        /// </summary>
         private void anneeAcadmiqueToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fermer();
@@ -53,6 +79,9 @@ namespace APPSenSoutenance
             f.WindowState = FormWindowState.Maximized;
         }
 
+        /// <summary>
+        /// Ouvre le formulaire de gestion des sessions
+        /// </summary>
         private void sessionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fermer();
@@ -62,6 +91,9 @@ namespace APPSenSoutenance
             f.WindowState = FormWindowState.Maximized;
         }
 
+        /// <summary>
+        /// Ouvre le formulaire de gestion des professeurs
+        /// </summary>
         private void professeurToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fermer();
@@ -72,6 +104,9 @@ namespace APPSenSoutenance
         }
 
 
+        /// <summary>
+        /// Ouvre le formulaire de gestion des soutenances
+        /// </summary>
         private void soutenanceToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fermer();
@@ -81,6 +116,9 @@ namespace APPSenSoutenance
             f.WindowState = FormWindowState.Maximized;
         }
 
+        /// <summary>
+        /// Ouvre le formulaire de gestion des mémoires
+        /// </summary>
         private void memoireToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fermer();
@@ -90,6 +128,9 @@ namespace APPSenSoutenance
             f.WindowState = FormWindowState.Maximized;
         }
 
+        /// <summary>
+        /// Ouvre le formulaire de gestion des chefs de département
+        /// </summary>
         private void chefDeDepartementToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fermer();
@@ -99,6 +140,9 @@ namespace APPSenSoutenance
             f.WindowState = FormWindowState.Maximized;
         }
 
+        /// <summary>
+        /// Ouvre le formulaire de gestion des départements
+        /// </summary>
         private void departementToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fermer();
@@ -108,6 +152,10 @@ namespace APPSenSoutenance
             f.WindowState = FormWindowState.Maximized;
         }
 
+        /// <summary>
+        /// Événement déclenché au chargement du formulaire MDI
+        /// Configure la sécurité selon le profil utilisateur et ajuste la taille de la fenêtre
+        /// </summary>
         private void frmMDI_Load(object sender, EventArgs e)
         {
             securiteToolStripMenuItem.Visible = false;
@@ -121,6 +169,10 @@ namespace APPSenSoutenance
             this.Location = new Point(0, 0);
         }
 
+        /// <summary>
+        /// Ouvre le formulaire de gestion des utilisateurs
+        /// Accessible uniquement aux administrateurs
+        /// </summary>
         private void utilisateurToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fermer();
@@ -128,6 +180,7 @@ namespace APPSenSoutenance
             f.MdiParent = this;
             f.Show();
             f.WindowState = FormWindowState.Maximized;
+
         }
     }
 }
