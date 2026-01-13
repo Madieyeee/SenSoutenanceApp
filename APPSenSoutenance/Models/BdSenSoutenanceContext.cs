@@ -1,13 +1,18 @@
-﻿using AppSenSoutenance.Models;
+using APPSenSoutenance.Shared;
+using APPSenSoutenance.Models;
 using MySql.Data.EntityFramework;
 using System.Data.Entity;
 
 namespace APPSenSoutenance.Models
 {
-    [DbConfigurationType(typeof(MySqlEFConfiguration))]
+    [DbConfigurationType(typeof(MySqlConfiguration))]
     internal class BdSenSoutenanceContext : DbContext
     {
-        public BdSenSoutenanceContext() : base("connBdSenSoutenance") { }
+        public BdSenSoutenanceContext() : base("connBdSenSoutenance") 
+        {
+            // Cette ligne demande à EF de créer la BDD et d'appliquer toutes les migrations au démarrage.
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<BdSenSoutenanceContext, Migrations.Configuration>());
+        }
         public DbSet<AnneeAcademique> AnneeAcademiques { get; set; }
         public DbSet<Memoire> Memoires { get; set; }
         public DbSet<Session> Sessions { get; set; }
