@@ -17,6 +17,7 @@ namespace APPSenSoutenance.Models
         public DbSet<ChefDepartement> ChefDepartements { get; set; }
         public DbSet<Candidat> Candidats { get; set; }
         public DbSet<Professeur> Professeurs { get; set; }
+        public DbSet<Td_Erreur>Td_Erreur { get; set; }
         public object AnneeAcademique { get; internal set; }
 
     }
