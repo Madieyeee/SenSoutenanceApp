@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
+using APPSenSoutenance.Models;
 
 namespace APPSenSoutenance
 {
@@ -17,6 +19,11 @@ namespace APPSenSoutenance
 
         private void btnSeConnecter_Click(object sender, EventArgs e)
         {
+            BdSenSoutenanceContext db = new BdSenSoutenanceContext();
+            var leUser = db.Utilisateurs.Where(a=>a.EmailUtilisateur.ToLower()==txtIdentifiant.Text.ToLower()).FirstOrDefault();
+            if (leUser != null) {
+                    
+            }
             frmMDI f = new frmMDI();
             f.profil = "Admin";
             f.Show();
