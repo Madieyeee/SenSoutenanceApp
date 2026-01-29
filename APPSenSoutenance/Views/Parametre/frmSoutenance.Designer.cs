@@ -84,7 +84,7 @@
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 35;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(629, 492);
+            this.dataGridView1.Size = new System.Drawing.Size(700, 566);
             this.dataGridView1.TabIndex = 0;
             // 
             // btnRemove
@@ -95,7 +95,7 @@
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemove.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnRemove.ForeColor = System.Drawing.Color.White;
-            this.btnRemove.Location = new System.Drawing.Point(188, 562);
+            this.btnRemove.Location = new System.Drawing.Point(188, 606);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(150, 45);
             this.btnRemove.TabIndex = 9;
@@ -111,7 +111,7 @@
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(188, 506);
+            this.btnEdit.Location = new System.Drawing.Point(188, 550);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(150, 45);
             this.btnEdit.TabIndex = 8;
@@ -127,7 +127,7 @@
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(188, 450);
+            this.btnAdd.Location = new System.Drawing.Point(188, 494);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(150, 45);
             this.btnAdd.TabIndex = 7;
@@ -140,7 +140,7 @@
             this.cbbMemoire.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbbMemoire.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbbMemoire.FormattingEnabled = true;
-            this.cbbMemoire.Location = new System.Drawing.Point(12, 395);
+            this.cbbMemoire.Location = new System.Drawing.Point(12, 440);
             this.cbbMemoire.Name = "cbbMemoire";
             this.cbbMemoire.Size = new System.Drawing.Size(326, 36);
             this.cbbMemoire.TabIndex = 6;
@@ -151,7 +151,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.label2.Location = new System.Drawing.Point(8, 362);
+            this.label2.Location = new System.Drawing.Point(8, 407);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 28);
             this.label2.TabIndex = 18;
@@ -214,7 +214,7 @@
             // 
             this.txtMentionSoutenance.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMentionSoutenance.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtMentionSoutenance.Location = new System.Drawing.Point(12, 304);
+            this.txtMentionSoutenance.Location = new System.Drawing.Point(12, 302);
             this.txtMentionSoutenance.Name = "txtMentionSoutenance";
             this.txtMentionSoutenance.Size = new System.Drawing.Size(326, 34);
             this.txtMentionSoutenance.TabIndex = 4;
@@ -225,7 +225,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.label5.Location = new System.Drawing.Point(13, 271);
+            this.label5.Location = new System.Drawing.Point(12, 268);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(208, 28);
             this.label5.TabIndex = 24;
@@ -235,7 +235,7 @@
             // 
             this.txtObservation.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtObservation.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtObservation.Location = new System.Drawing.Point(12, 322);
+            this.txtObservation.Location = new System.Drawing.Point(13, 370);
             this.txtObservation.Multiline = true;
             this.txtObservation.Name = "txtObservation";
             this.txtObservation.Size = new System.Drawing.Size(326, 34);
@@ -247,7 +247,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.label6.Location = new System.Drawing.Point(13, 289);
+            this.label6.Location = new System.Drawing.Point(13, 341);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(128, 28);
             this.label6.TabIndex = 26;
@@ -269,7 +269,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(245)))));
-            this.ClientSize = new System.Drawing.Size(1006, 629);
+            this.ClientSize = new System.Drawing.Size(1088, 710);
             this.ControlBox = false;
             this.Controls.Add(this.cbbDateSoutenance);
             this.Controls.Add(this.txtObservation);

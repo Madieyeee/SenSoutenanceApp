@@ -51,7 +51,7 @@ namespace APPSenSoutenance.Shared
                     File.Create(path);
                     //File.Delete(path);
                 }
-                
+
                 bool fileUse = true;
                 while (fileUse)
                 {
