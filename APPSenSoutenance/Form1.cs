@@ -35,7 +35,7 @@ namespace APPSenSoutenance
                         if (VerifyMd5Hash(md5Hash, txtMotDePasse.Text, leUser.MotDePasse))
                         {
                             frmMDI f = new frmMDI();
-                            f.profil = db.Utilisateurs.GetType().Name;
+                            f.profil = leUser.GetType().Name;
                             f.Show();
                             this.Hide();
                         }
@@ -52,6 +52,7 @@ namespace APPSenSoutenance
             }
             catch (Exception ex)
             {
+                MessageBox.Show("Erreur: " + ex.Message + "\n\n" + ex.ToString(), "Erreur de connexion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 logger.WriteDataError("FrmConnexion-btnSeConnecter_Click", ex.ToString());
             }
         }

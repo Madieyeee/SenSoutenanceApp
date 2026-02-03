@@ -182,5 +182,10 @@ namespace APPSenSoutenance
             f.WindowState = FormWindowState.Maximized;
 
         }
+
+        private void securiteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

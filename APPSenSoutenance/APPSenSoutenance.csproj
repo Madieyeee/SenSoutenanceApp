@@ -136,6 +136,10 @@
     <Compile Include="Migrations\202601291830308_AjoutTypeUtilisateur1.Designer.cs">
       <DependentUpon>202601291830308_AjoutTypeUtilisateur1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202602030027482_SyncModel.cs" />
+    <Compile Include="Migrations\202602030027482_SyncModel.Designer.cs">
+      <DependentUpon>202602030027482_SyncModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\AnneeAcademique.cs" />
@@ -217,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202601291830308_AjoutTypeUtilisateur1.resx">
       <DependentUpon>202601291830308_AjoutTypeUtilisateur1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202602030027482_SyncModel.resx">
+      <DependentUpon>202602030027482_SyncModel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
