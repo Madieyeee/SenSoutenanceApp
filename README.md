@@ -233,7 +233,23 @@ Formulaire complet pour l'enregistrement des mémoires avec upload de documents.
 ### Première connexion
 
 1. Lancez l'application
-2. Utilisez les identifiants par défaut (à créer lors de la première exécution)
+2. Utilisez l'un des comptes par défaut créés automatiquement :
+
+#### 👤 Comptes par défaut
+
+**Administrateur**
+- **Email** : `admin@sensoutenance.sn`
+- **Mot de passe** : `admin123`
+- **Accès** : Complet (gestion des utilisateurs, paramètres, soutenances)
+
+**Candidat**
+- **Email** : `candidat@sensoutenance.sn`
+- **Mot de passe** : `candidat123`
+- **Matricule** : `2021-001`
+- **Accès** : Limité (consultation des soutenances)
+
+> ⚠️ **Important** : Changez ces mots de passe après la première connexion pour des raisons de sécurité.
+
 3. Accédez au tableau de bord principal
 
 ### Gestion des soutenances
