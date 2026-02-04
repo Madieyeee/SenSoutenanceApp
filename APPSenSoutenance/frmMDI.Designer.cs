@@ -28,182 +28,343 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.actionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.seDeconnecterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.parametreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.anneeAcadmiqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sessionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.professeurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.soutenanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.memoireToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chefDeDepartementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.departementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.securiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.utilisateurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.panelSidebar = new System.Windows.Forms.Panel();
+            this.btnDeconnexion = new System.Windows.Forms.Button();
+            this.panelMenu = new System.Windows.Forms.Panel();
+            this.btnSecurite = new System.Windows.Forms.Button();
+            this.btnParametres = new System.Windows.Forms.Button();
+            this.btnDepartements = new System.Windows.Forms.Button();
+            this.btnProfesseurs = new System.Windows.Forms.Button();
+            this.btnMemoires = new System.Windows.Forms.Button();
+            this.btnSoutenances = new System.Windows.Forms.Button();
+            this.btnDashboard = new System.Windows.Forms.Button();
+            this.panelUserInfo = new System.Windows.Forms.Panel();
+            this.lblUserRole = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.panelLogo = new System.Windows.Forms.Panel();
+            this.lblAppName = new System.Windows.Forms.Label();
+            this.panelHeader = new System.Windows.Forms.Panel();
+            this.lblBreadcrumb = new System.Windows.Forms.Label();
+            this.lblPageTitle = new System.Windows.Forms.Label();
+            this.panelSidebar.SuspendLayout();
+            this.panelMenu.SuspendLayout();
+            this.panelUserInfo.SuspendLayout();
+            this.panelLogo.SuspendLayout();
+            this.panelHeader.SuspendLayout();
             this.SuspendLayout();
             // 
-            // menuStrip1
+            // panelSidebar
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.actionToolStripMenuItem,
-            this.parametreToolStripMenuItem,
-            this.securiteToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 5, 0, 5);
-            this.menuStrip1.Size = new System.Drawing.Size(800, 44);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
+            this.panelSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.panelSidebar.Controls.Add(this.btnDeconnexion);
+            this.panelSidebar.Controls.Add(this.panelMenu);
+            this.panelSidebar.Controls.Add(this.panelUserInfo);
+            this.panelSidebar.Controls.Add(this.panelLogo);
+            this.panelSidebar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelSidebar.Location = new System.Drawing.Point(0, 0);
+            this.panelSidebar.Name = "panelSidebar";
+            this.panelSidebar.Size = new System.Drawing.Size(250, 800);
+            this.panelSidebar.TabIndex = 0;
             // 
-            // actionToolStripMenuItem
+            // btnDeconnexion
             // 
-            this.actionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.seDeconnecterToolStripMenuItem,
-            this.quitterToolStripMenuItem});
-            this.actionToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.actionToolStripMenuItem.Name = "actionToolStripMenuItem";
-            this.actionToolStripMenuItem.Size = new System.Drawing.Size(96, 34);
-            this.actionToolStripMenuItem.Text = "&Action";
+            this.btnDeconnexion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.btnDeconnexion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeconnexion.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnDeconnexion.FlatAppearance.BorderSize = 0;
+            this.btnDeconnexion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeconnexion.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnDeconnexion.ForeColor = System.Drawing.Color.White;
+            this.btnDeconnexion.Location = new System.Drawing.Point(0, 750);
+            this.btnDeconnexion.Name = "btnDeconnexion";
+            this.btnDeconnexion.Size = new System.Drawing.Size(250, 50);
+            this.btnDeconnexion.TabIndex = 3;
+            this.btnDeconnexion.Text = "🚺 Déconnexion";
+            this.btnDeconnexion.UseVisualStyleBackColor = false;
+            this.btnDeconnexion.Click += new System.EventHandler(this.seDeconnecterToolStripMenuItem_Click);
             // 
-            // seDeconnecterToolStripMenuItem
+            // panelMenu
             // 
-            this.seDeconnecterToolStripMenuItem.Name = "seDeconnecterToolStripMenuItem";
-            this.seDeconnecterToolStripMenuItem.Size = new System.Drawing.Size(275, 38);
-            this.seDeconnecterToolStripMenuItem.Text = "&Se déconnecter";
-            this.seDeconnecterToolStripMenuItem.Click += new System.EventHandler(this.seDeconnecterToolStripMenuItem_Click);
+            this.panelMenu.Controls.Add(this.btnSecurite);
+            this.panelMenu.Controls.Add(this.btnParametres);
+            this.panelMenu.Controls.Add(this.btnDepartements);
+            this.panelMenu.Controls.Add(this.btnProfesseurs);
+            this.panelMenu.Controls.Add(this.btnMemoires);
+            this.panelMenu.Controls.Add(this.btnSoutenances);
+            this.panelMenu.Controls.Add(this.btnDashboard);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelMenu.Location = new System.Drawing.Point(0, 156);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Padding = new System.Windows.Forms.Padding(10, 20, 10, 10);
+            this.panelMenu.Size = new System.Drawing.Size(250, 500);
+            this.panelMenu.TabIndex = 2;
             // 
-            // quitterToolStripMenuItem
+            // btnSecurite
             // 
-            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(275, 38);
-            this.quitterToolStripMenuItem.Text = "&Quitter";
-            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
+            this.btnSecurite.BackColor = System.Drawing.Color.Transparent;
+            this.btnSecurite.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSecurite.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSecurite.FlatAppearance.BorderSize = 0;
+            this.btnSecurite.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSecurite.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnSecurite.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.btnSecurite.Location = new System.Drawing.Point(10, 295);
+            this.btnSecurite.Name = "btnSecurite";
+            this.btnSecurite.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnSecurite.Size = new System.Drawing.Size(230, 45);
+            this.btnSecurite.TabIndex = 6;
+            this.btnSecurite.Text = "🔐 Sécurité";
+            this.btnSecurite.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSecurite.UseVisualStyleBackColor = false;
+            this.btnSecurite.Click += new System.EventHandler(this.utilisateurToolStripMenuItem_Click);
             // 
-            // parametreToolStripMenuItem
+            // btnParametres
             // 
-            this.parametreToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.anneeAcadmiqueToolStripMenuItem,
-            this.sessionToolStripMenuItem,
-            this.professeurToolStripMenuItem,
-            this.soutenanceToolStripMenuItem,
-            this.memoireToolStripMenuItem,
-            this.chefDeDepartementToolStripMenuItem,
-            this.departementToolStripMenuItem});
-            this.parametreToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.parametreToolStripMenuItem.Name = "parametreToolStripMenuItem";
-            this.parametreToolStripMenuItem.Size = new System.Drawing.Size(147, 34);
-            this.parametreToolStripMenuItem.Text = "&Paramètres";
+            this.btnParametres.BackColor = System.Drawing.Color.Transparent;
+            this.btnParametres.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnParametres.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnParametres.FlatAppearance.BorderSize = 0;
+            this.btnParametres.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnParametres.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnParametres.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.btnParametres.Location = new System.Drawing.Point(10, 250);
+            this.btnParametres.Name = "btnParametres";
+            this.btnParametres.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnParametres.Size = new System.Drawing.Size(230, 45);
+            this.btnParametres.TabIndex = 5;
+            this.btnParametres.Text = "⚙️ Paramètres";
+            this.btnParametres.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnParametres.UseVisualStyleBackColor = false;
+            this.btnParametres.Click += new System.EventHandler(this.anneeAcadmiqueToolStripMenuItem_Click);
             // 
-            // anneeAcadmiqueToolStripMenuItem
+            // btnDepartements
             // 
-            this.anneeAcadmiqueToolStripMenuItem.Name = "anneeAcadmiqueToolStripMenuItem";
-            this.anneeAcadmiqueToolStripMenuItem.Size = new System.Drawing.Size(338, 38);
-            this.anneeAcadmiqueToolStripMenuItem.Text = "&Année académique";
-            this.anneeAcadmiqueToolStripMenuItem.Click += new System.EventHandler(this.anneeAcadmiqueToolStripMenuItem_Click);
+            this.btnDepartements.BackColor = System.Drawing.Color.Transparent;
+            this.btnDepartements.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDepartements.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDepartements.FlatAppearance.BorderSize = 0;
+            this.btnDepartements.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDepartements.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnDepartements.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.btnDepartements.Location = new System.Drawing.Point(10, 205);
+            this.btnDepartements.Name = "btnDepartements";
+            this.btnDepartements.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnDepartements.Size = new System.Drawing.Size(230, 45);
+            this.btnDepartements.TabIndex = 4;
+            this.btnDepartements.Text = "🏢 Départements";
+            this.btnDepartements.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDepartements.UseVisualStyleBackColor = false;
+            this.btnDepartements.Click += new System.EventHandler(this.departementToolStripMenuItem_Click);
             // 
-            // sessionToolStripMenuItem
+            // btnProfesseurs
             // 
-            this.sessionToolStripMenuItem.Name = "sessionToolStripMenuItem";
-            this.sessionToolStripMenuItem.Size = new System.Drawing.Size(338, 38);
-            this.sessionToolStripMenuItem.Text = "&Session";
-            this.sessionToolStripMenuItem.Click += new System.EventHandler(this.sessionToolStripMenuItem_Click);
+            this.btnProfesseurs.BackColor = System.Drawing.Color.Transparent;
+            this.btnProfesseurs.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProfesseurs.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnProfesseurs.FlatAppearance.BorderSize = 0;
+            this.btnProfesseurs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfesseurs.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnProfesseurs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.btnProfesseurs.Location = new System.Drawing.Point(10, 160);
+            this.btnProfesseurs.Name = "btnProfesseurs";
+            this.btnProfesseurs.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnProfesseurs.Size = new System.Drawing.Size(230, 45);
+            this.btnProfesseurs.TabIndex = 3;
+            this.btnProfesseurs.Text = "👨‍🏫 Professeurs";
+            this.btnProfesseurs.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProfesseurs.UseVisualStyleBackColor = false;
+            this.btnProfesseurs.Click += new System.EventHandler(this.professeurToolStripMenuItem_Click);
             // 
-            // professeurToolStripMenuItem
+            // btnMemoires
             // 
-            this.professeurToolStripMenuItem.Name = "professeurToolStripMenuItem";
-            this.professeurToolStripMenuItem.Size = new System.Drawing.Size(338, 38);
-            this.professeurToolStripMenuItem.Text = "&Professeur";
-            this.professeurToolStripMenuItem.Click += new System.EventHandler(this.professeurToolStripMenuItem_Click);
+            this.btnMemoires.BackColor = System.Drawing.Color.Transparent;
+            this.btnMemoires.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMemoires.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMemoires.FlatAppearance.BorderSize = 0;
+            this.btnMemoires.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMemoires.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnMemoires.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.btnMemoires.Location = new System.Drawing.Point(10, 115);
+            this.btnMemoires.Name = "btnMemoires";
+            this.btnMemoires.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnMemoires.Size = new System.Drawing.Size(230, 45);
+            this.btnMemoires.TabIndex = 2;
+            this.btnMemoires.Text = "📝 Mémoires";
+            this.btnMemoires.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMemoires.UseVisualStyleBackColor = false;
+            this.btnMemoires.Click += new System.EventHandler(this.memoireToolStripMenuItem_Click);
             // 
-            // soutenanceToolStripMenuItem
+            // btnSoutenances
             // 
-            this.soutenanceToolStripMenuItem.Name = "soutenanceToolStripMenuItem";
-            this.soutenanceToolStripMenuItem.Size = new System.Drawing.Size(338, 38);
-            this.soutenanceToolStripMenuItem.Text = "&Soutenance";
-            this.soutenanceToolStripMenuItem.Click += new System.EventHandler(this.soutenanceToolStripMenuItem_Click);
+            this.btnSoutenances.BackColor = System.Drawing.Color.Transparent;
+            this.btnSoutenances.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSoutenances.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSoutenances.FlatAppearance.BorderSize = 0;
+            this.btnSoutenances.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSoutenances.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnSoutenances.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.btnSoutenances.Location = new System.Drawing.Point(10, 70);
+            this.btnSoutenances.Name = "btnSoutenances";
+            this.btnSoutenances.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnSoutenances.Size = new System.Drawing.Size(230, 45);
+            this.btnSoutenances.TabIndex = 1;
+            this.btnSoutenances.Text = "📚 Soutenances";
+            this.btnSoutenances.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSoutenances.UseVisualStyleBackColor = false;
+            this.btnSoutenances.Click += new System.EventHandler(this.soutenanceToolStripMenuItem_Click);
             // 
-            // memoireToolStripMenuItem
+            // btnDashboard
             // 
-            this.memoireToolStripMenuItem.Name = "memoireToolStripMenuItem";
-            this.memoireToolStripMenuItem.Size = new System.Drawing.Size(338, 38);
-            this.memoireToolStripMenuItem.Text = "&Mémoire";
-            this.memoireToolStripMenuItem.Click += new System.EventHandler(this.memoireToolStripMenuItem_Click);
+            this.btnDashboard.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnDashboard.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDashboard.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDashboard.FlatAppearance.BorderSize = 0;
+            this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnDashboard.ForeColor = System.Drawing.Color.White;
+            this.btnDashboard.Location = new System.Drawing.Point(10, 20);
+            this.btnDashboard.Name = "btnDashboard";
+            this.btnDashboard.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnDashboard.Size = new System.Drawing.Size(230, 50);
+            this.btnDashboard.TabIndex = 0;
+            this.btnDashboard.Text = "📊 Tableau de bord";
+            this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDashboard.UseVisualStyleBackColor = false;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
-            // chefDeDepartementToolStripMenuItem
+            // panelUserInfo
             // 
-            this.chefDeDepartementToolStripMenuItem.Name = "chefDeDepartementToolStripMenuItem";
-            this.chefDeDepartementToolStripMenuItem.Size = new System.Drawing.Size(338, 38);
-            this.chefDeDepartementToolStripMenuItem.Text = "&Chef de département";
-            this.chefDeDepartementToolStripMenuItem.Click += new System.EventHandler(this.chefDeDepartementToolStripMenuItem_Click);
+            this.panelUserInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.panelUserInfo.Controls.Add(this.lblUserRole);
+            this.panelUserInfo.Controls.Add(this.lblUserName);
+            this.panelUserInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelUserInfo.Location = new System.Drawing.Point(0, 80);
+            this.panelUserInfo.Name = "panelUserInfo";
+            this.panelUserInfo.Padding = new System.Windows.Forms.Padding(15, 10, 15, 10);
+            this.panelUserInfo.Size = new System.Drawing.Size(250, 76);
+            this.panelUserInfo.TabIndex = 1;
             // 
-            // departementToolStripMenuItem
+            // lblUserRole
             // 
-            this.departementToolStripMenuItem.Name = "departementToolStripMenuItem";
-            this.departementToolStripMenuItem.Size = new System.Drawing.Size(338, 38);
-            this.departementToolStripMenuItem.Text = "&Département";
-            this.departementToolStripMenuItem.Click += new System.EventHandler(this.departementToolStripMenuItem_Click);
+            this.lblUserRole.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblUserRole.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblUserRole.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.lblUserRole.Location = new System.Drawing.Point(15, 36);
+            this.lblUserRole.Name = "lblUserRole";
+            this.lblUserRole.Size = new System.Drawing.Size(220, 30);
+            this.lblUserRole.TabIndex = 1;
+            this.lblUserRole.Text = "Administrateur";
+            this.lblUserRole.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // securiteToolStripMenuItem
+            // lblUserName
             // 
-            this.securiteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.utilisateurToolStripMenuItem});
-            this.securiteToolStripMenuItem.ForeColor = System.Drawing.Color.White;
-            this.securiteToolStripMenuItem.Name = "securiteToolStripMenuItem";
-            this.securiteToolStripMenuItem.Size = new System.Drawing.Size(113, 34);
-            this.securiteToolStripMenuItem.Text = "Sécurité";
-            this.securiteToolStripMenuItem.Click += new System.EventHandler(this.securiteToolStripMenuItem_Click);
+            this.lblUserName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblUserName.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.lblUserName.ForeColor = System.Drawing.Color.White;
+            this.lblUserName.Location = new System.Drawing.Point(15, 10);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(220, 30);
+            this.lblUserName.TabIndex = 0;
+            this.lblUserName.Text = "👤 Utilisateur";
+            this.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // utilisateurToolStripMenuItem
+            // panelLogo
             // 
-            this.utilisateurToolStripMenuItem.Name = "utilisateurToolStripMenuItem";
-            this.utilisateurToolStripMenuItem.Size = new System.Drawing.Size(271, 38);
-            this.utilisateurToolStripMenuItem.Text = "👥 Utilisateurs";
-            this.utilisateurToolStripMenuItem.Click += new System.EventHandler(this.utilisateurToolStripMenuItem_Click);
+            this.panelLogo.Controls.Add(this.lblAppName);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(250, 80);
+            this.panelLogo.TabIndex = 0;
+            // 
+            // lblAppName
+            // 
+            this.lblAppName.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.lblAppName.ForeColor = System.Drawing.Color.White;
+            this.lblAppName.Location = new System.Drawing.Point(2, 0);
+            this.lblAppName.Name = "lblAppName";
+            this.lblAppName.Size = new System.Drawing.Size(250, 90);
+            this.lblAppName.TabIndex = 0;
+            this.lblAppName.Text = "🎓 Sen\r\nSoutenance";
+            this.lblAppName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panelHeader
+            // 
+            this.panelHeader.BackColor = System.Drawing.Color.White;
+            this.panelHeader.Controls.Add(this.lblBreadcrumb);
+            this.panelHeader.Controls.Add(this.lblPageTitle);
+            this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelHeader.Location = new System.Drawing.Point(250, 0);
+            this.panelHeader.Name = "panelHeader";
+            this.panelHeader.Padding = new System.Windows.Forms.Padding(30, 15, 30, 15);
+            this.panelHeader.Size = new System.Drawing.Size(1150, 120);
+            this.panelHeader.TabIndex = 1;
+            // 
+            // lblBreadcrumb
+            // 
+            this.lblBreadcrumb.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lblBreadcrumb.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblBreadcrumb.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.lblBreadcrumb.Location = new System.Drawing.Point(30, 72);
+            this.lblBreadcrumb.Name = "lblBreadcrumb";
+            this.lblBreadcrumb.Size = new System.Drawing.Size(1090, 33);
+            this.lblBreadcrumb.TabIndex = 1;
+            this.lblBreadcrumb.Text = "Accueil > Tableau de bord";
+            this.lblBreadcrumb.Click += new System.EventHandler(this.lblBreadcrumb_Click);
+            // 
+            // lblPageTitle
+            // 
+            this.lblPageTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblPageTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.lblPageTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.lblPageTitle.Location = new System.Drawing.Point(30, 15);
+            this.lblPageTitle.Name = "lblPageTitle";
+            this.lblPageTitle.Size = new System.Drawing.Size(1090, 57);
+            this.lblPageTitle.TabIndex = 0;
+            this.lblPageTitle.Text = "Tableau de bord";
             // 
             // frmMDI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(245)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.ControlBox = false;
-            this.Controls.Add(this.menuStrip1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.ClientSize = new System.Drawing.Size(1400, 800);
+            this.Controls.Add(this.panelHeader);
+            this.Controls.Add(this.panelSidebar);
             this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmMDI";
-            this.Text = "🎓 Sen Soutenance :: Gestion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "🎓 Sen Soutenance - Gestion";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMDI_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.panelSidebar.ResumeLayout(false);
+            this.panelMenu.ResumeLayout(false);
+            this.panelUserInfo.ResumeLayout(false);
+            this.panelLogo.ResumeLayout(false);
+            this.panelHeader.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem actionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem seDeconnecterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem parametreToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem anneeAcadmiqueToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem professeurToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sessionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem soutenanceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem memoireToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem chefDeDepartementToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem departementToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem securiteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem utilisateurToolStripMenuItem;
+        private System.Windows.Forms.Panel panelSidebar;
+        private System.Windows.Forms.Panel panelLogo;
+        private System.Windows.Forms.Label lblAppName;
+        private System.Windows.Forms.Panel panelUserInfo;
+        private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.Label lblUserRole;
+        private System.Windows.Forms.Panel panelMenu;
+        private System.Windows.Forms.Button btnDashboard;
+        private System.Windows.Forms.Button btnSoutenances;
+        private System.Windows.Forms.Button btnMemoires;
+        private System.Windows.Forms.Button btnProfesseurs;
+        private System.Windows.Forms.Button btnDepartements;
+        private System.Windows.Forms.Button btnParametres;
+        private System.Windows.Forms.Button btnSecurite;
+        private System.Windows.Forms.Button btnDeconnexion;
+        private System.Windows.Forms.Panel panelHeader;
+        private System.Windows.Forms.Label lblPageTitle;
+        private System.Windows.Forms.Label lblBreadcrumb;
     }
 }

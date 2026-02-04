@@ -82,7 +82,7 @@
             this.dgSession.RowHeadersWidth = 62;
             this.dgSession.RowTemplate.Height = 35;
             this.dgSession.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgSession.Size = new System.Drawing.Size(873, 572);
+            this.dgSession.Size = new System.Drawing.Size(824, 484);
             this.dgSession.TabIndex = 0;
             // 
             // btnRemove
