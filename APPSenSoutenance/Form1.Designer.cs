@@ -55,16 +55,16 @@
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft.Location = new System.Drawing.Point(0, 0);
             this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(450, 650);
+            this.panelLeft.Size = new System.Drawing.Size(487, 729);
             this.panelLeft.TabIndex = 0;
             // 
             // lblVersion
             // 
             this.lblVersion.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblVersion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.lblVersion.Location = new System.Drawing.Point(30, 600);
+            this.lblVersion.Location = new System.Drawing.Point(22, 676);
             this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(390, 30);
+            this.lblVersion.Size = new System.Drawing.Size(226, 30);
             this.lblVersion.TabIndex = 2;
             this.lblVersion.Text = "Version 1.0.0 © 2026";
             this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -95,9 +95,9 @@
             this.panelRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.panelRight.Controls.Add(this.panelConnexion);
             this.panelRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelRight.Location = new System.Drawing.Point(450, 0);
+            this.panelRight.Location = new System.Drawing.Point(487, 0);
             this.panelRight.Name = "panelRight";
-            this.panelRight.Size = new System.Drawing.Size(550, 650);
+            this.panelRight.Size = new System.Drawing.Size(804, 729);
             this.panelRight.TabIndex = 1;
             this.panelRight.Paint += new System.Windows.Forms.PaintEventHandler(this.panelRight_Paint);
             // 
@@ -111,18 +111,18 @@
             this.panelConnexion.Controls.Add(this.txtMotDePasse);
             this.panelConnexion.Controls.Add(this.btnSeConnecter);
             this.panelConnexion.Controls.Add(this.btnQuitter);
-            this.panelConnexion.Location = new System.Drawing.Point(65, 120);
+            this.panelConnexion.Location = new System.Drawing.Point(129, 149);
             this.panelConnexion.Name = "panelConnexion";
-            this.panelConnexion.Size = new System.Drawing.Size(420, 450);
+            this.panelConnexion.Size = new System.Drawing.Size(487, 481);
             this.panelConnexion.TabIndex = 0;
             // 
             // lblTitre
             // 
             this.lblTitre.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
             this.lblTitre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
-            this.lblTitre.Location = new System.Drawing.Point(0, 30);
+            this.lblTitre.Location = new System.Drawing.Point(73, 39);
             this.lblTitre.Name = "lblTitre";
-            this.lblTitre.Size = new System.Drawing.Size(420, 50);
+            this.lblTitre.Size = new System.Drawing.Size(317, 50);
             this.lblTitre.TabIndex = 0;
             this.lblTitre.Text = "Connexion";
             this.lblTitre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -178,7 +178,7 @@
             this.btnSeConnecter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeConnecter.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnSeConnecter.ForeColor = System.Drawing.Color.White;
-            this.btnSeConnecter.Location = new System.Drawing.Point(30, 300);
+            this.btnSeConnecter.Location = new System.Drawing.Point(60, 301);
             this.btnSeConnecter.Name = "btnSeConnecter";
             this.btnSeConnecter.Size = new System.Drawing.Size(360, 55);
             this.btnSeConnecter.TabIndex = 5;
@@ -194,9 +194,9 @@
             this.btnQuitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuitter.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.btnQuitter.ForeColor = System.Drawing.Color.White;
-            this.btnQuitter.Location = new System.Drawing.Point(30, 370);
+            this.btnQuitter.Location = new System.Drawing.Point(60, 371);
             this.btnQuitter.Name = "btnQuitter";
-            this.btnQuitter.Size = new System.Drawing.Size(180, 50);
+            this.btnQuitter.Size = new System.Drawing.Size(360, 50);
             this.btnQuitter.TabIndex = 6;
             this.btnQuitter.Text = "Quitter";
             this.btnQuitter.UseVisualStyleBackColor = false;
@@ -207,7 +207,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1000, 650);
+            this.ClientSize = new System.Drawing.Size(1291, 729);
             this.ControlBox = false;
             this.Controls.Add(this.panelRight);
             this.Controls.Add(this.panelLeft);
