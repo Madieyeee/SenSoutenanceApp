@@ -43,63 +43,120 @@ namespace APPSenSoutenance.Views.Parametre
             this.pnlSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgSession)).BeginInit();
             this.SuspendLayout();
-
-            // pnlHeader
-            this.pnlHeader.Controls.Add(this.lblHeaderTitle);
-            this.pnlHeader.Controls.Add(this.lblHeaderSub);
-            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeader.GradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(18)))), ((int)(((byte)(16)))));
-            this.pnlHeader.GradientStart = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(25)))), ((int)(((byte)(23)))));
-            this.pnlHeader.Height = 72;
-            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1100, 72);
-
-            // lblHeaderTitle
-            this.lblHeaderTitle.AutoSize = true;
-            this.lblHeaderTitle.BackColor = System.Drawing.Color.Transparent;
-            this.lblHeaderTitle.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.lblHeaderTitle.ForeColor = DarkTheme.TextTitle;
-            this.lblHeaderTitle.Location = new System.Drawing.Point(62, 10);
-            this.lblHeaderTitle.Name = "lblHeaderTitle";
-            this.lblHeaderTitle.Size = new System.Drawing.Size(217, 41);
-            this.lblHeaderTitle.Text = "Gestion des Sessions";
-
-            // lblHeaderSub
-            this.lblHeaderSub.AutoSize = true;
-            this.lblHeaderSub.BackColor = System.Drawing.Color.Transparent;
-            this.lblHeaderSub.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblHeaderSub.ForeColor = DarkTheme.TextSecondary;
-            this.lblHeaderSub.Location = new System.Drawing.Point(64, 38);
-            this.lblHeaderSub.Name = "lblHeaderSub";
-            this.lblHeaderSub.Size = new System.Drawing.Size(350, 25);
-            this.lblHeaderSub.Text = "Définition des périodes de soutenance";
-
-            // pnlLeft
-            this.pnlLeft.BackColor = DarkTheme.BgCard;
-            this.pnlLeft.Controls.Add(this.lblSession);
-            this.pnlLeft.Controls.Add(this.txtSession);
-            this.pnlLeft.Controls.Add(this.lblAnnee);
-            this.pnlLeft.Controls.Add(this.cbbAnneeAcademique);
-            this.pnlLeft.Controls.Add(this.btnSelect);
-            this.pnlLeft.Controls.Add(this.btnAdd);
-            this.pnlLeft.Controls.Add(this.btnEdit);
-            this.pnlLeft.Controls.Add(this.btnRemove);
-            this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlLeft.Location = new System.Drawing.Point(0, 72);
-            this.pnlLeft.Name = "pnlLeft";
-            this.pnlLeft.Padding = new System.Windows.Forms.Padding(20);
-            this.pnlLeft.Size = new System.Drawing.Size(360, 628);
-
-            // lblSession
-            this.lblSession.AutoSize = true;
-            this.lblSession.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
-            this.lblSession.ForeColor = DarkTheme.TextSecondary;
-            this.lblSession.Location = new System.Drawing.Point(20, 20);
-            this.lblSession.Name = "lblSession";
-            this.lblSession.Size = new System.Drawing.Size(142, 23);
-            this.lblSession.Text = "NOM SESSION";
-
+            // 
+            // dgSession
+            // 
+            this.dgSession.AllowUserToAddRows = false;
+            this.dgSession.AllowUserToDeleteRows = false;
+            this.dgSession.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgSession.BackgroundColor = System.Drawing.Color.White;
+            this.dgSession.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgSession.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgSession.ColumnHeadersHeight = 45;
+            this.dgSession.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgSession.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgSession.EnableHeadersVisualStyles = false;
+            this.dgSession.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.dgSession.Location = new System.Drawing.Point(370, 90);
+            this.dgSession.Name = "dgSession";
+            this.dgSession.ReadOnly = true;
+            this.dgSession.RowHeadersVisible = false;
+            this.dgSession.RowHeadersWidth = 62;
+            this.dgSession.RowTemplate.Height = 35;
+            this.dgSession.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgSession.Size = new System.Drawing.Size(824, 484);
+            this.dgSession.TabIndex = 0;
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
+            this.btnRemove.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRemove.FlatAppearance.BorderSize = 0;
+            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemove.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnRemove.ForeColor = System.Drawing.Color.White;
+            this.btnRemove.Location = new System.Drawing.Point(182, 470);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(150, 45);
+            this.btnRemove.TabIndex = 6;
+            this.btnRemove.Text = "Supprimer";
+            this.btnRemove.UseVisualStyleBackColor = false;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEdit.FlatAppearance.BorderSize = 0;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Location = new System.Drawing.Point(182, 415);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(150, 45);
+            this.btnEdit.TabIndex = 5;
+            this.btnEdit.Text = "Modifier";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.FlatAppearance.BorderSize = 0;
+            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(182, 360);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(150, 45);
+            this.btnAdd.TabIndex = 4;
+            this.btnAdd.Text = "Ajouter";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click_1);
+            // 
+            // btnSelect
+            // 
+            this.btnSelect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(89)))), ((int)(((byte)(182)))));
+            this.btnSelect.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSelect.FlatAppearance.BorderSize = 0;
+            this.btnSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSelect.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnSelect.ForeColor = System.Drawing.Color.White;
+            this.btnSelect.Location = new System.Drawing.Point(20, 15);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(150, 45);
+            this.btnSelect.TabIndex = 3;
+            this.btnSelect.Text = "Sélectionner";
+            this.btnSelect.UseVisualStyleBackColor = false;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.label2.Location = new System.Drawing.Point(20, 195);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(200, 28);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Année Académique:";
+            // 
             // txtSession
             this.txtSession.BackColor = DarkTheme.BgHover;
             this.txtSession.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;

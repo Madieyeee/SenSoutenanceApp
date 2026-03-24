@@ -18,202 +18,197 @@ namespace APPSenSoutenance
 
         private void InitializeComponent()
         {
+            this.panelLeft = new System.Windows.Forms.Panel();
+            this.lblVersion = new System.Windows.Forms.Label();
+            this.lblSubtitle = new System.Windows.Forms.Label();
+            this.lblWelcome = new System.Windows.Forms.Label();
+            this.panelRight = new System.Windows.Forms.Panel();
+            this.panelConnexion = new System.Windows.Forms.Panel();
+            this.lblTitre = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtIdentifiant = new System.Windows.Forms.TextBox();
-            this.txtMotDePasse = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnQuitter = new System.Windows.Forms.Button();
+            this.txtMotDePasse = new System.Windows.Forms.TextBox();
             this.btnSeConnecter = new System.Windows.Forms.Button();
-            this.lblTitre = new System.Windows.Forms.Label();
-            this.lblSousTitre = new System.Windows.Forms.Label();
-            this.lblSeparateur = new System.Windows.Forms.Label();
-            this.panelConnexion = new System.Windows.Forms.Panel();
-            this.panelLeft = new System.Windows.Forms.Panel();
-            this.lblBrand = new System.Windows.Forms.Label();
-            this.lblBrandDesc = new System.Windows.Forms.Label();
+            this.btnQuitter = new System.Windows.Forms.Button();
+            this.panelLeft.SuspendLayout();
+            this.panelRight.SuspendLayout();
             this.panelConnexion.SuspendLayout();
             this.panelLeft.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panelLeft
+            // 
+            this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.panelLeft.Controls.Add(this.lblVersion);
+            this.panelLeft.Controls.Add(this.lblSubtitle);
+            this.panelLeft.Controls.Add(this.lblWelcome);
+            this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelLeft.Location = new System.Drawing.Point(0, 0);
+            this.panelLeft.Name = "panelLeft";
+            this.panelLeft.Size = new System.Drawing.Size(487, 729);
+            this.panelLeft.TabIndex = 0;
+            // 
+            // lblVersion
+            // 
+            this.lblVersion.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblVersion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.lblVersion.Location = new System.Drawing.Point(22, 676);
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.Size = new System.Drawing.Size(226, 30);
+            this.lblVersion.TabIndex = 2;
+            this.lblVersion.Text = "Version 1.0.0 © 2026";
+            this.lblVersion.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblSubtitle
+            // 
+            this.lblSubtitle.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.lblSubtitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.lblSubtitle.Location = new System.Drawing.Point(50, 323);
+            this.lblSubtitle.Name = "lblSubtitle";
+            this.lblSubtitle.Size = new System.Drawing.Size(342, 80);
+            this.lblSubtitle.TabIndex = 1;
+            this.lblSubtitle.Text = "Système de gestion des soutenances académiques";
+            // 
+            // lblWelcome
+            // 
+            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 32F, System.Drawing.FontStyle.Bold);
+            this.lblWelcome.ForeColor = System.Drawing.Color.White;
+            this.lblWelcome.Location = new System.Drawing.Point(30, 150);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(390, 173);
+            this.lblWelcome.TabIndex = 0;
+            this.lblWelcome.Text = "🎓 Sen\r\nSoutenance";
+            this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panelRight
+            // 
+            this.panelRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
+            this.panelRight.Controls.Add(this.panelConnexion);
+            this.panelRight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelRight.Location = new System.Drawing.Point(487, 0);
+            this.panelRight.Name = "panelRight";
+            this.panelRight.Size = new System.Drawing.Size(804, 729);
+            this.panelRight.TabIndex = 1;
+            this.panelRight.Paint += new System.Windows.Forms.PaintEventHandler(this.panelRight_Paint);
+            // 
+            // panelConnexion
+            // 
+            this.panelConnexion.BackColor = System.Drawing.Color.White;
+            this.panelConnexion.Controls.Add(this.lblTitre);
+            this.panelConnexion.Controls.Add(this.label1);
+            this.panelConnexion.Controls.Add(this.txtIdentifiant);
+            this.panelConnexion.Controls.Add(this.label2);
+            this.panelConnexion.Controls.Add(this.txtMotDePasse);
+            this.panelConnexion.Controls.Add(this.btnSeConnecter);
+            this.panelConnexion.Controls.Add(this.btnQuitter);
+            this.panelConnexion.Location = new System.Drawing.Point(129, 149);
+            this.panelConnexion.Name = "panelConnexion";
+            this.panelConnexion.Size = new System.Drawing.Size(487, 481);
+            this.panelConnexion.TabIndex = 0;
+            // 
+            // lblTitre
+            // 
+            this.lblTitre.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
+            this.lblTitre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.lblTitre.Location = new System.Drawing.Point(73, 39);
+            this.lblTitre.Name = "lblTitre";
+            this.lblTitre.Size = new System.Drawing.Size(317, 50);
+            this.lblTitre.TabIndex = 0;
+            this.lblTitre.Text = "Connexion";
+            this.lblTitre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(162)))), ((int)(((byte)(158)))));
-            this.label1.Location = new System.Drawing.Point(62, 164);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.label1.Location = new System.Drawing.Point(51, 102);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 23);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "IDENTIFIANT";
+            this.label1.Size = new System.Drawing.Size(146, 28);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "📧 Identifiant";
             // 
             // txtIdentifiant
             // 
-            this.txtIdentifiant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(36)))));
-            this.txtIdentifiant.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtIdentifiant.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtIdentifiant.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(228)))));
-            this.txtIdentifiant.Location = new System.Drawing.Point(62, 188);
-            this.txtIdentifiant.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtIdentifiant.BackColor = System.Drawing.Color.LightGray;
+            this.txtIdentifiant.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtIdentifiant.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtIdentifiant.Location = new System.Drawing.Point(56, 142);
             this.txtIdentifiant.Name = "txtIdentifiant";
-            this.txtIdentifiant.Size = new System.Drawing.Size(347, 32);
-            this.txtIdentifiant.TabIndex = 1;
-            // 
-            // txtMotDePasse
-            // 
-            this.txtMotDePasse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(36)))));
-            this.txtMotDePasse.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMotDePasse.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtMotDePasse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(228)))));
-            this.txtMotDePasse.Location = new System.Drawing.Point(62, 260);
-            this.txtMotDePasse.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtMotDePasse.Name = "txtMotDePasse";
-            this.txtMotDePasse.Size = new System.Drawing.Size(347, 32);
-            this.txtMotDePasse.TabIndex = 2;
-            this.txtMotDePasse.UseSystemPasswordChar = true;
+            this.txtIdentifiant.Size = new System.Drawing.Size(350, 32);
+            this.txtIdentifiant.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(162)))), ((int)(((byte)(158)))));
-            this.label2.Location = new System.Drawing.Point(62, 236);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
+            this.label2.Location = new System.Drawing.Point(51, 192);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 23);
+            this.label2.Size = new System.Drawing.Size(172, 28);
             this.label2.TabIndex = 3;
-            this.label2.Text = "MOT DE PASSE";
+            this.label2.Text = "🔒 Mot de passe";
             // 
-            // btnQuitter
+            // txtMotDePasse
             // 
-            this.btnQuitter.BackColor = System.Drawing.Color.Transparent;
-            this.btnQuitter.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnQuitter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(64)))), ((int)(((byte)(60)))));
-            this.btnQuitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuitter.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnQuitter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(162)))), ((int)(((byte)(158)))));
-            this.btnQuitter.Location = new System.Drawing.Point(289, 324);
-            this.btnQuitter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnQuitter.Name = "btnQuitter";
-            this.btnQuitter.Size = new System.Drawing.Size(120, 38);
-            this.btnQuitter.TabIndex = 4;
-            this.btnQuitter.Text = "Quitter";
-            this.btnQuitter.UseVisualStyleBackColor = false;
-            this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
+            this.txtMotDePasse.BackColor = System.Drawing.Color.LightGray;
+            this.txtMotDePasse.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMotDePasse.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtMotDePasse.Location = new System.Drawing.Point(56, 232);
+            this.txtMotDePasse.Name = "txtMotDePasse";
+            this.txtMotDePasse.Size = new System.Drawing.Size(350, 32);
+            this.txtMotDePasse.TabIndex = 4;
+            this.txtMotDePasse.UseSystemPasswordChar = true;
             // 
             // btnSeConnecter
             // 
-            this.btnSeConnecter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(119)))), ((int)(((byte)(6)))));
+            this.btnSeConnecter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
             this.btnSeConnecter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSeConnecter.FlatAppearance.BorderSize = 0;
             this.btnSeConnecter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSeConnecter.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnSeConnecter.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnSeConnecter.ForeColor = System.Drawing.Color.White;
-            this.btnSeConnecter.Location = new System.Drawing.Point(62, 324);
-            this.btnSeConnecter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSeConnecter.Location = new System.Drawing.Point(141, 299);
             this.btnSeConnecter.Name = "btnSeConnecter";
-            this.btnSeConnecter.Size = new System.Drawing.Size(213, 38);
-            this.btnSeConnecter.TabIndex = 3;
-            this.btnSeConnecter.Text = "Se connecter →";
+            this.btnSeConnecter.Size = new System.Drawing.Size(197, 52);
+            this.btnSeConnecter.TabIndex = 5;
+            this.btnSeConnecter.Text = "Se connecter";
             this.btnSeConnecter.UseVisualStyleBackColor = false;
             this.btnSeConnecter.Click += new System.EventHandler(this.btnSeConnecter_Click);
             // 
-            // lblTitre
+            // btnQuitter
             // 
-            this.lblTitre.BackColor = System.Drawing.Color.Transparent;
-            this.lblTitre.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
-            this.lblTitre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(249)))));
-            this.lblTitre.Location = new System.Drawing.Point(62, 72);
-            this.lblTitre.Name = "lblTitre";
-            this.lblTitre.Size = new System.Drawing.Size(356, 40);
-            this.lblTitre.TabIndex = 0;
-            this.lblTitre.Text = "Connexion";
-            // 
-            // lblSousTitre
-            // 
-            this.lblSousTitre.BackColor = System.Drawing.Color.Transparent;
-            this.lblSousTitre.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.lblSousTitre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(162)))), ((int)(((byte)(158)))));
-            this.lblSousTitre.Location = new System.Drawing.Point(62, 116);
-            this.lblSousTitre.Name = "lblSousTitre";
-            this.lblSousTitre.Size = new System.Drawing.Size(356, 24);
-            this.lblSousTitre.TabIndex = 1;
-            this.lblSousTitre.Text = "Entrez vos identifiants pour accéder au système";
-            // 
-            // lblSeparateur
-            // 
-            this.lblSeparateur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(64)))), ((int)(((byte)(60)))));
-            this.lblSeparateur.Location = new System.Drawing.Point(62, 308);
-            this.lblSeparateur.Name = "lblSeparateur";
-            this.lblSeparateur.Size = new System.Drawing.Size(347, 1);
-            this.lblSeparateur.TabIndex = 4;
-            // 
-            // panelConnexion
-            // 
-            this.panelConnexion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(25)))), ((int)(((byte)(23)))));
-            this.panelConnexion.Controls.Add(this.lblTitre);
-            this.panelConnexion.Controls.Add(this.lblSousTitre);
-            this.panelConnexion.Controls.Add(this.label1);
-            this.panelConnexion.Controls.Add(this.txtIdentifiant);
-            this.panelConnexion.Controls.Add(this.label2);
-            this.panelConnexion.Controls.Add(this.txtMotDePasse);
-            this.panelConnexion.Controls.Add(this.lblSeparateur);
-            this.panelConnexion.Controls.Add(this.btnSeConnecter);
-            this.panelConnexion.Controls.Add(this.btnQuitter);
-            this.panelConnexion.Location = new System.Drawing.Point(338, 0);
-            this.panelConnexion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelConnexion.Name = "panelConnexion";
-            this.panelConnexion.Size = new System.Drawing.Size(480, 464);
-            this.panelConnexion.TabIndex = 1;
-            // 
-            // panelLeft
-            // 
-            this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(25)))), ((int)(((byte)(23)))));
-            this.panelLeft.Controls.Add(this.lblBrand);
-            this.panelLeft.Controls.Add(this.lblBrandDesc);
-            this.panelLeft.Location = new System.Drawing.Point(0, 0);
-            this.panelLeft.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(338, 464);
-            this.panelLeft.TabIndex = 0;
-            // 
-            // lblBrand
-            // 
-            this.lblBrand.BackColor = System.Drawing.Color.Transparent;
-            this.lblBrand.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Bold);
-            this.lblBrand.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(119)))), ((int)(((byte)(6)))));
-            this.lblBrand.Location = new System.Drawing.Point(12, 72);
-            this.lblBrand.Name = "lblBrand";
-            this.lblBrand.Size = new System.Drawing.Size(309, 200);
-            this.lblBrand.TabIndex = 0;
-            this.lblBrand.Text = "🎓\nSen\nSoutenance";
-            this.lblBrand.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblBrand.Click += new System.EventHandler(this.lblBrand_Click);
-            // 
-            // lblBrandDesc
-            // 
-            this.lblBrandDesc.BackColor = System.Drawing.Color.Transparent;
-            this.lblBrandDesc.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lblBrandDesc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(162)))), ((int)(((byte)(158)))));
-            this.lblBrandDesc.Location = new System.Drawing.Point(36, 280);
-            this.lblBrandDesc.Name = "lblBrandDesc";
-            this.lblBrandDesc.Size = new System.Drawing.Size(267, 64);
-            this.lblBrandDesc.TabIndex = 1;
-            this.lblBrandDesc.Text = "Plateforme de gestion\ndes soutenances académiques";
-            this.lblBrandDesc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnQuitter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
+            this.btnQuitter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnQuitter.FlatAppearance.BorderSize = 0;
+            this.btnQuitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuitter.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnQuitter.ForeColor = System.Drawing.Color.White;
+            this.btnQuitter.Location = new System.Drawing.Point(141, 369);
+            this.btnQuitter.Name = "btnQuitter";
+            this.btnQuitter.Size = new System.Drawing.Size(197, 47);
+            this.btnQuitter.TabIndex = 6;
+            this.btnQuitter.Text = "Quitter";
+            this.btnQuitter.UseVisualStyleBackColor = false;
+            this.btnQuitter.Click += new System.EventHandler(this.btnQuitter_Click);
             // 
             // FrmConnexion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(10)))), ((int)(((byte)(9)))));
-            this.ClientSize = new System.Drawing.Size(818, 464);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1291, 729);
             this.ControlBox = false;
+            this.Controls.Add(this.panelRight);
             this.Controls.Add(this.panelLeft);
-            this.Controls.Add(this.panelConnexion);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmConnexion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sen Soutenance :: Connexion";
+            this.Text = "Sen Soutenance - Connexion";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.panelLeft.ResumeLayout(false);
+            this.panelRight.ResumeLayout(false);
             this.panelConnexion.ResumeLayout(false);
             this.panelConnexion.PerformLayout();
             this.panelLeft.ResumeLayout(false);
@@ -223,19 +218,19 @@ namespace APPSenSoutenance
 
         #endregion
 
+        private System.Windows.Forms.Panel panelLeft;
+        private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.Label lblSubtitle;
+        private System.Windows.Forms.Label lblVersion;
+        private System.Windows.Forms.Panel panelRight;
+        private System.Windows.Forms.Panel panelConnexion;
+        private System.Windows.Forms.Label lblTitre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtIdentifiant;
-        private System.Windows.Forms.TextBox txtMotDePasse;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnQuitter;
+        private System.Windows.Forms.TextBox txtMotDePasse;
         private System.Windows.Forms.Button btnSeConnecter;
-        private System.Windows.Forms.Label lblTitre;
-        private System.Windows.Forms.Label lblSousTitre;
-        private System.Windows.Forms.Label lblSeparateur;
-        private System.Windows.Forms.Panel panelConnexion;
-        private System.Windows.Forms.Panel panelLeft;
-        private System.Windows.Forms.Label lblBrand;
-        private System.Windows.Forms.Label lblBrandDesc;
+        private System.Windows.Forms.Button btnQuitter;
     }
 }
 
