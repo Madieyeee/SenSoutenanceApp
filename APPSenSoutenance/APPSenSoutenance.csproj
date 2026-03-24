@@ -160,7 +160,9 @@
     <Compile Include="Shared\DarkTheme.cs" />
     <Compile Include="Shared\FillerList.cs" />
     <Compile Include="Shared\logger.cs" />
-    <Compile Include="Shared\UIComponents.cs" />
+    <Compile Include="Shared\UIComponents.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Views\Account\frmUtilisateur.cs">
       <SubType>Form</SubType>
     </Compile>

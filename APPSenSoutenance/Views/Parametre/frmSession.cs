@@ -1,4 +1,4 @@
-﻿using AppSenSoutenance.Shared;
+using AppSenSoutenance.Shared;
 using APPSenSoutenance.Models;
 using System;
 using System.Data;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Windows.Forms;
 using Session = APPSenSoutenance.Models.Session;
 
-namespace AppSenSoutenance.View.Paramètre
+namespace APPSenSoutenance.Views.Parametre
 {
     public partial class frmSession : Form
     {
@@ -23,7 +23,7 @@ namespace AppSenSoutenance.View.Paramètre
             Effacer();
         }
 
-        private void btnAdd_Click_1(object sender, EventArgs e)
+        private void btnAdd_Click(object sender, EventArgs e)
         {
             Session session = new Session();
             session.LibelleSession = txtSession.Text;

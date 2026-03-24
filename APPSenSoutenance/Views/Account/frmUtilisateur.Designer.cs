@@ -31,11 +31,11 @@ namespace APPSenSoutenance.Views.Account
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnRemove = new System.Windows.Forms.Button();
             this.pnlRight = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgUtilisateur = new System.Windows.Forms.DataGridView();
             this.pnlHeader.SuspendLayout();
             this.pnlLeft.SuspendLayout();
             this.pnlRight.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgUtilisateur)).BeginInit();
             this.SuspendLayout();
 
             // pnlHeader
@@ -189,27 +189,27 @@ namespace APPSenSoutenance.Views.Account
 
             // pnlRight
             this.pnlRight.BackColor = DarkTheme.BgPrincipal;
-            this.pnlRight.Controls.Add(this.dataGridView1);
+            this.pnlRight.Controls.Add(this.dgUtilisateur);
             this.pnlRight.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlRight.Location = new System.Drawing.Point(360, 72);
             this.pnlRight.Name = "pnlRight";
             this.pnlRight.Padding = new System.Windows.Forms.Padding(16);
             this.pnlRight.Size = new System.Drawing.Size(740, 628);
 
-            // dataGridView1
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = DarkTheme.BgPrincipal;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 16);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(708, 596);
-            this.dataGridView1.TabIndex = 0;
+            // dgUtilisateur
+            this.dgUtilisateur.AllowUserToAddRows = false;
+            this.dgUtilisateur.AllowUserToDeleteRows = false;
+            this.dgUtilisateur.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgUtilisateur.BackgroundColor = DarkTheme.BgPrincipal;
+            this.dgUtilisateur.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgUtilisateur.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgUtilisateur.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgUtilisateur.Location = new System.Drawing.Point(16, 16);
+            this.dgUtilisateur.Name = "dgUtilisateur";
+            this.dgUtilisateur.ReadOnly = true;
+            this.dgUtilisateur.RowHeadersVisible = false;
+            this.dgUtilisateur.Size = new System.Drawing.Size(708, 596);
+            this.dgUtilisateur.TabIndex = 0;
 
             // frmUtilisateur
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -226,7 +226,7 @@ namespace APPSenSoutenance.Views.Account
             this.pnlLeft.ResumeLayout(false);
             this.pnlLeft.PerformLayout();
             this.pnlRight.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgUtilisateur)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -246,6 +246,6 @@ namespace APPSenSoutenance.Views.Account
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnRemove;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgUtilisateur;
     }
 }

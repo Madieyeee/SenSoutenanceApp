@@ -1,6 +1,7 @@
 using APPSenSoutenance.Shared;
 using System.Drawing;
 using System.Windows.Forms;
+using System;
 
 namespace APPSenSoutenance.Views.Parametre
 {
@@ -10,7 +11,10 @@ namespace APPSenSoutenance.Views.Parametre
 
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null)) components.Dispose();
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
             base.Dispose(disposing);
         }
 
