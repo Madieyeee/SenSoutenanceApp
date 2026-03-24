@@ -1,4 +1,5 @@
-﻿using AppSenSoutenance.View.Paramètre;
+using AppSenSoutenance.View.Paramètre;
+using APPSenSoutenance.Shared;
 using APPSenSoutenance.Views.Account;
 using APPSenSoutenance.Views.Parametre;
 using Microsoft.VisualBasic.Devices;
@@ -158,6 +159,9 @@ namespace APPSenSoutenance
         /// </summary>
         private void frmMDI_Load(object sender, EventArgs e)
         {
+            // Appliquer le DarkMenuRenderer
+            DarkTheme.StyleMenuStrip(menuStrip1);
+
             securiteToolStripMenuItem.Visible = false;
             if (profil == "Admin")
             {

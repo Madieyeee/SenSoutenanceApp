@@ -1,5 +1,6 @@
-﻿using AppSenSoutenance.Models;
+using AppSenSoutenance.Models;
 using APPSenSoutenance.Models;
+using APPSenSoutenance.Shared;
 using System;
 using System.Data;
 using System.Drawing;
@@ -72,11 +73,12 @@ namespace APPSenSoutenance.Views.Account
 
         private void frmUtilisateur_Load(object sender, EventArgs e)
         {
-            // Appliquer le style des lignes alternées au DataGridView
-            dgUtilisateur.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(236, 240, 245);
-            dgUtilisateur.AlternatingRowsDefaultCellStyle.ForeColor = Color.FromArgb(52, 73, 94);
-            dgUtilisateur.DefaultCellStyle.BackColor = Color.White;
-            dgUtilisateur.DefaultCellStyle.ForeColor = Color.FromArgb(52, 73, 94);
+            // Appliquer le thème dark au formulaire
+            this.BackColor = DarkTheme.BgPrincipal;
+            this.ForeColor = DarkTheme.TextPrimary;
+
+            // Style DataGridView dark premium
+            DarkTheme.StyleDataGridView(dgUtilisateur);
 
             // Charger les données
             ResetForm();

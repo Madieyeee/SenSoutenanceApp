@@ -1,6 +1,6 @@
-﻿using APPSenSoutenance.Models;
+using APPSenSoutenance.Models;
+using APPSenSoutenance.Shared;
 using System;
-using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -22,11 +22,10 @@ namespace APPSenSoutenance.Views.Parametre
 
         private void frmAnneeAcademique_Load(object sender, EventArgs e)
         {
-            // Appliquer le style des lignes alternées au DataGridView
-            dgAnneeAcademique.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(236, 240, 245);
-            dgAnneeAcademique.AlternatingRowsDefaultCellStyle.ForeColor = Color.FromArgb(52, 73, 94);
-            dgAnneeAcademique.DefaultCellStyle.BackColor = Color.White;
-            dgAnneeAcademique.DefaultCellStyle.ForeColor = Color.FromArgb(52, 73, 94);
+            // Thème dark premium
+            this.BackColor = DarkTheme.BgPrincipal;
+            this.ForeColor = DarkTheme.TextPrimary;
+            DarkTheme.StyleDataGridView(dgAnneeAcademique);
 
             // Charger les données
             Effacer();

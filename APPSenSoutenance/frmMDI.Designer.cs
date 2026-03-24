@@ -1,4 +1,4 @@
-﻿namespace APPSenSoutenance
+namespace APPSenSoutenance
 {
     partial class frmMDI
     {
@@ -47,7 +47,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(28, 25, 23);   // #1C1917
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
@@ -67,7 +67,7 @@
             this.actionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.seDeconnecterToolStripMenuItem,
             this.quitterToolStripMenuItem});
-            this.actionToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.actionToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(231, 229, 228);  // TextPrimary
             this.actionToolStripMenuItem.Name = "actionToolStripMenuItem";
             this.actionToolStripMenuItem.Size = new System.Drawing.Size(96, 34);
             this.actionToolStripMenuItem.Text = "&Action";
@@ -96,7 +96,7 @@
             this.memoireToolStripMenuItem,
             this.chefDeDepartementToolStripMenuItem,
             this.departementToolStripMenuItem});
-            this.parametreToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.parametreToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(231, 229, 228);
             this.parametreToolStripMenuItem.Name = "parametreToolStripMenuItem";
             this.parametreToolStripMenuItem.Size = new System.Drawing.Size(147, 34);
             this.parametreToolStripMenuItem.Text = "&Paramètres";
@@ -154,7 +154,7 @@
             // 
             this.securiteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.utilisateurToolStripMenuItem});
-            this.securiteToolStripMenuItem.ForeColor = System.Drawing.Color.White;
+            this.securiteToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(231, 229, 228);
             this.securiteToolStripMenuItem.Name = "securiteToolStripMenuItem";
             this.securiteToolStripMenuItem.Size = new System.Drawing.Size(113, 34);
             this.securiteToolStripMenuItem.Text = "Sécurité";
@@ -171,7 +171,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(245)))));
+            this.BackColor = System.Drawing.Color.FromArgb(12, 10, 9);   // #0C0A09 dark principal
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
             this.Controls.Add(this.menuStrip1);
@@ -179,6 +179,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmMDI";
+            this.ForeColor = System.Drawing.Color.FromArgb(231, 229, 228);
             this.Text = "🎓 Sen Soutenance :: Gestion";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMDI_Load);
