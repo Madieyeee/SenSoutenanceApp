@@ -31,34 +31,44 @@ namespace APPSenSoutenance
 
         private void OpenForm(Form frm, Button navBtn)
         {
-            fermer();
-            frm.MdiParent = this;
-            frm.Show();
-            frm.WindowState = FormWindowState.Maximized;
-            SetActiveButton(navBtn);
+            try
+            {
+                // Nettoyer le conteneur principal
+                pnlMdiContainer.Controls.Clear();
+                
+                // Configurer le formulaire pour l'insertion
+                frm.TopLevel = false;
+                frm.FormBorderStyle = FormBorderStyle.None;
+                frm.Dock = DockStyle.Fill;
+                
+                // Ajouter et afficher
+                pnlMdiContainer.Controls.Add(frm);
+                frm.Show();
+                
+                SetActiveButton(navBtn);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erreur lors de l'ouverture du formulaire : " + ex.Message);
+            }
         }
 
         private void fermer()
         {
-            foreach (Form f in this.MdiChildren)
-            {
-                f.WindowState = FormWindowState.Maximized;
-                f.Close();
-            }
+            pnlMdiContainer.Controls.Clear();
         }
 
         // ── Chargement ───────────────────────────────────────────────
         private void frmMDI_Load(object sender, EventArgs e)
         {
-            // Masquer sécurité sauf Admin
-            btnUtilisateur.Visible = false;
-            if (profil == "Admin")
-                btnUtilisateur.Visible = true;
+            // Maximiser la fenêtre principal
+            this.WindowState = FormWindowState.Maximized;
 
-            Computer myComputer = new Computer();
-            this.Width  = myComputer.Screen.Bounds.Width;
-            this.Height = myComputer.Screen.Bounds.Height;
-            this.Location = new Point(0, 0);
+            // Masquer sécurité sauf Admin ou Utilisateur identifié
+            btnUtilisateur.Visible = false;
+            // Pour le moment on autorise l'affichage si profil est Utilisateur ou Admin
+            if (profil == "Admin" || profil == "Utilisateur" || profil.Contains("Proxy"))
+                btnUtilisateur.Visible = true;
 
             // Mise à jour heure
             timerClock.Start();

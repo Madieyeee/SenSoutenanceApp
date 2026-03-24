@@ -11,23 +11,16 @@ namespace APPSenSoutenance.Views.Parametre
         public frmAnneeAcademique()
         {
             InitializeComponent();
+            this.Load += new EventHandler(frmAnneeAcademique_Load);
         }
 
         BdSenSoutenanceContext db = new BdSenSoutenanceContext();
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            dgAnneeAcademique.DataSource = db.AnneeAcademiques.ToList();
-        }
-
         private void frmAnneeAcademique_Load(object sender, EventArgs e)
         {
-            // Thème dark premium
             this.BackColor = DarkTheme.BgPrincipal;
             this.ForeColor = DarkTheme.TextPrimary;
             DarkTheme.StyleDataGridView(dgAnneeAcademique);
-
-            // Charger les données
             Effacer();
         }
 
@@ -38,8 +31,10 @@ namespace APPSenSoutenance.Views.Parametre
             dgAnneeAcademique.DataSource = db.AnneeAcademiques.ToList();
             txtLibelleAnneeAcademique.Focus();
         }
+
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(txtLibelleAnneeAcademique.Text)) { MessageBox.Show("Le libellé est requis.", "Attention"); return; }
             AnneeAcademique anneeAcademique = new AnneeAcademique
             {
                 LibelleAnneeAcademique = txtLibelleAnneeAcademique.Text,
@@ -52,6 +47,7 @@ namespace APPSenSoutenance.Views.Parametre
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            if (dgAnneeAcademique.CurrentRow == null) return;
             int? id = int.Parse(dgAnneeAcademique.CurrentRow.Cells[0].Value.ToString());
             AnneeAcademique anneeAcademique = db.AnneeAcademiques.Find(id);
             anneeAcademique.LibelleAnneeAcademique = txtLibelleAnneeAcademique.Text;
@@ -62,6 +58,7 @@ namespace APPSenSoutenance.Views.Parametre
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
+            if (dgAnneeAcademique.CurrentRow == null) return;
             int? id = int.Parse(dgAnneeAcademique.CurrentRow.Cells[0].Value.ToString());
             AnneeAcademique anneeAcademique = db.AnneeAcademiques.Find(id);
             db.AnneeAcademiques.Remove(anneeAcademique);
@@ -76,7 +73,6 @@ namespace APPSenSoutenance.Views.Parametre
                 MessageBox.Show("Veuillez sélectionner une ligne.", "Attention");
                 return;
             }
-
             txtLibelleAnneeAcademique.Text = dgAnneeAcademique.CurrentRow.Cells[1].Value.ToString();
             txtAnneeAcademiqueVal.Text = dgAnneeAcademique.CurrentRow.Cells[2].Value.ToString();
         }

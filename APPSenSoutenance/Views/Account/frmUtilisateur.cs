@@ -1,7 +1,6 @@
 using APPSenSoutenance.Models;
 using APPSenSoutenance.Shared;
 using System;
-using System.Data;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Windows.Forms;
@@ -13,18 +12,16 @@ namespace APPSenSoutenance.Views.Account
         public frmUtilisateur()
         {
             InitializeComponent();
+            this.Load += new EventHandler(frmUtilisateur_Load);
         }
 
         BdSenSoutenanceContext db = new BdSenSoutenanceContext();
 
         private void frmUtilisateur_Load(object sender, EventArgs e)
         {
-            // Thème dark premium
             this.BackColor = DarkTheme.BgPrincipal;
             this.ForeColor = DarkTheme.TextPrimary;
             DarkTheme.StyleDataGridView(dgUtilisateur);
-
-            // Charger les données
             ResetForm();
         }
 
@@ -34,10 +31,8 @@ namespace APPSenSoutenance.Views.Account
             {
                 a.IdUtilisateur,
                 a.NomUtilisateur,
-                a.EmailUtilisateur,
-                a.MotDePasse
+                a.EmailUtilisateur
             }).ToList();
-            
             txtNomUtilisateur.Clear();
             txtMotDePasse.Clear();
             cbbRole.SelectedIndex = -1;
@@ -46,13 +41,15 @@ namespace APPSenSoutenance.Views.Account
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Utilisateur u = new Utilisateur
+            if (string.IsNullOrWhiteSpace(txtNomUtilisateur.Text)) { MessageBox.Show("Le nom est requis.", "Attention"); return; }
+            var u = new Utilisateur
             {
                 NomUtilisateur = txtNomUtilisateur.Text,
-                EmailUtilisateur = txtNomUtilisateur.Text + "@univ.sn", // Email géré par défaut si non présent
-                MotDePasse = txtMotDePasse.Text
+                PrenomUtilisateur = "",
+                TelUtilisateur = "",
+                EmailUtilisateur = txtNomUtilisateur.Text + "@univ.sn",
+                MotDePasse = Crypted.GetMd5Hash(MD5.Create(), txtMotDePasse.Text)
             };
-            
             db.Utilisateurs.Add(u);
             db.SaveChanges();
             ResetForm();
@@ -66,7 +63,8 @@ namespace APPSenSoutenance.Views.Account
             if (u != null)
             {
                 u.NomUtilisateur = txtNomUtilisateur.Text;
-                u.MotDePasse = txtMotDePasse.Text;
+                if (!string.IsNullOrWhiteSpace(txtMotDePasse.Text))
+                    u.MotDePasse = Crypted.GetMd5Hash(MD5.Create(), txtMotDePasse.Text);
                 db.SaveChanges();
                 ResetForm();
             }
@@ -75,6 +73,7 @@ namespace APPSenSoutenance.Views.Account
         private void btnRemove_Click(object sender, EventArgs e)
         {
             if (dgUtilisateur.CurrentRow == null) return;
+            if (MessageBox.Show("Supprimer cet utilisateur ?", "Confirmation", MessageBoxButtons.YesNo) == DialogResult.No) return;
             int id = int.Parse(dgUtilisateur.CurrentRow.Cells[0].Value.ToString());
             var u = db.Utilisateurs.Find(id);
             if (u != null)

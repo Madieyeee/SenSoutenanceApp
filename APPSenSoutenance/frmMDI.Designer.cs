@@ -341,7 +341,7 @@ namespace APPSenSoutenance
             this.Controls.Add(this.pnlMdiContainer);
             this.Controls.Add(this.pnlSidebar);
             this.Font = new System.Drawing.Font("Segoe UI", 9.5F);
-            this.IsMdiContainer = true;
+            this.IsMdiContainer = false;
             this.Name = "frmMDI";
             this.Text = "Sen Soutenance";
             this.Load += new System.EventHandler(this.frmMDI_Load);
