@@ -329,6 +329,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(240)))), ((int)(((byte)(241)))));
             this.ClientSize = new System.Drawing.Size(1400, 800);
+            this.ControlBox = false;
             this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.panelSidebar);
             this.IsMdiContainer = true;

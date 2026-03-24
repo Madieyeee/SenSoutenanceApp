@@ -132,7 +132,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.label1.Location = new System.Drawing.Point(30, 110);
+            this.label1.Location = new System.Drawing.Point(51, 102);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(146, 28);
             this.label1.TabIndex = 1;
@@ -140,10 +140,10 @@
             // 
             // txtIdentifiant
             // 
-            this.txtIdentifiant.BackColor = System.Drawing.Color.White;
+            this.txtIdentifiant.BackColor = System.Drawing.Color.LightGray;
             this.txtIdentifiant.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIdentifiant.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtIdentifiant.Location = new System.Drawing.Point(35, 150);
+            this.txtIdentifiant.Location = new System.Drawing.Point(56, 142);
             this.txtIdentifiant.Name = "txtIdentifiant";
             this.txtIdentifiant.Size = new System.Drawing.Size(350, 32);
             this.txtIdentifiant.TabIndex = 2;
@@ -153,7 +153,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(140)))), ((int)(((byte)(141)))));
-            this.label2.Location = new System.Drawing.Point(30, 200);
+            this.label2.Location = new System.Drawing.Point(51, 192);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(172, 28);
             this.label2.TabIndex = 3;
@@ -161,10 +161,10 @@
             // 
             // txtMotDePasse
             // 
-            this.txtMotDePasse.BackColor = System.Drawing.Color.White;
+            this.txtMotDePasse.BackColor = System.Drawing.Color.LightGray;
             this.txtMotDePasse.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMotDePasse.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtMotDePasse.Location = new System.Drawing.Point(35, 240);
+            this.txtMotDePasse.Location = new System.Drawing.Point(56, 232);
             this.txtMotDePasse.Name = "txtMotDePasse";
             this.txtMotDePasse.Size = new System.Drawing.Size(350, 32);
             this.txtMotDePasse.TabIndex = 4;
@@ -178,9 +178,9 @@
             this.btnSeConnecter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeConnecter.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnSeConnecter.ForeColor = System.Drawing.Color.White;
-            this.btnSeConnecter.Location = new System.Drawing.Point(60, 301);
+            this.btnSeConnecter.Location = new System.Drawing.Point(141, 299);
             this.btnSeConnecter.Name = "btnSeConnecter";
-            this.btnSeConnecter.Size = new System.Drawing.Size(360, 55);
+            this.btnSeConnecter.Size = new System.Drawing.Size(197, 52);
             this.btnSeConnecter.TabIndex = 5;
             this.btnSeConnecter.Text = "Se connecter";
             this.btnSeConnecter.UseVisualStyleBackColor = false;
@@ -194,9 +194,9 @@
             this.btnQuitter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuitter.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.btnQuitter.ForeColor = System.Drawing.Color.White;
-            this.btnQuitter.Location = new System.Drawing.Point(60, 371);
+            this.btnQuitter.Location = new System.Drawing.Point(141, 369);
             this.btnQuitter.Name = "btnQuitter";
-            this.btnQuitter.Size = new System.Drawing.Size(360, 50);
+            this.btnQuitter.Size = new System.Drawing.Size(197, 47);
             this.btnQuitter.TabIndex = 6;
             this.btnQuitter.Text = "Quitter";
             this.btnQuitter.UseVisualStyleBackColor = false;
