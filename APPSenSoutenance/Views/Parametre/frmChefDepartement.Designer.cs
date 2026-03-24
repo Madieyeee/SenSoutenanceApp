@@ -1,276 +1,225 @@
-﻿namespace APPSenSoutenance.Views.Parametre
+using APPSenSoutenance.Shared;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace APPSenSoutenance.Views.Parametre
 {
     partial class frmChefDepartement
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
+            if (disposing && (components != null)) components.Dispose();
             base.Dispose(disposing);
         }
 
         #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtTelephone = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtNom = new System.Windows.Forms.TextBox();
+            this.pnlHeader = new APPSenSoutenance.Shared.GradientPanel();
+            this.lblHeaderTitle = new System.Windows.Forms.Label();
+            this.lblHeaderSub = new System.Windows.Forms.Label();
+            this.pnlLeft = new System.Windows.Forms.Panel();
+            this.lblProf = new System.Windows.Forms.Label();
+            this.cbbProfesseur = new System.Windows.Forms.ComboBox();
+            this.lblDept = new System.Windows.Forms.Label();
             this.cbbDepartement = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnRemove = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.txtPrenom = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtMail = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.btnEdit = new System.Windows.Forms.Button();
+            this.btnRemove = new System.Windows.Forms.Button();
+            this.pnlRight = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.pnlHeader.SuspendLayout();
+            this.pnlLeft.SuspendLayout();
+            this.pnlRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(41, 128, 185);
-            this.dataGridView1.ColumnHeadersDefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.dataGridView1.ColumnHeadersDefaultCellStyle.ForeColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(41, 128, 185);
-            this.dataGridView1.ColumnHeadersHeight = 45;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridView1.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(52, 152, 219);
-            this.dataGridView1.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(346, 90);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 35;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(631, 514);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // txtTelephone
-            // 
-            this.txtTelephone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTelephone.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtTelephone.Location = new System.Drawing.Point(12, 233);
-            this.txtTelephone.Name = "txtTelephone";
-            this.txtTelephone.Size = new System.Drawing.Size(326, 34);
-            this.txtTelephone.TabIndex = 3;
-            this.txtTelephone.TextChanged += new System.EventHandler(this.txtTelephone_TextChanged);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(52, 73, 94);
-            this.label6.Location = new System.Drawing.Point(12, 342);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(142, 28);
-            this.label6.TabIndex = 53;
-            this.label6.Text = "Département";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(52, 73, 94);
-            this.label4.Location = new System.Drawing.Point(12, 200);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 28);
-            this.label4.TabIndex = 52;
-            this.label4.Text = "Téléphone";
-            // 
-            // txtNom
-            // 
-            this.txtNom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNom.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtNom.Location = new System.Drawing.Point(12, 90);
-            this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(326, 34);
-            this.txtNom.TabIndex = 1;
-            this.txtNom.TextChanged += new System.EventHandler(this.txtNom_TextChanged);
-            // 
+
+            // pnlHeader
+            this.pnlHeader.Controls.Add(this.lblHeaderTitle);
+            this.pnlHeader.Controls.Add(this.lblHeaderSub);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.GradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(18)))), ((int)(((byte)(16)))));
+            this.pnlHeader.GradientStart = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(25)))), ((int)(((byte)(23)))));
+            this.pnlHeader.Height = 72;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(1100, 72);
+
+            // lblHeaderTitle
+            this.lblHeaderTitle.AutoSize = true;
+            this.lblHeaderTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblHeaderTitle.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.lblHeaderTitle.ForeColor = DarkTheme.TextTitle;
+            this.lblHeaderTitle.Location = new System.Drawing.Point(62, 10);
+            this.lblHeaderTitle.Name = "lblHeaderTitle";
+            this.lblHeaderTitle.Size = new System.Drawing.Size(430, 41);
+            this.lblHeaderTitle.Text = "Assignation Chefs de Département";
+
+            // lblHeaderSub
+            this.lblHeaderSub.AutoSize = true;
+            this.lblHeaderSub.BackColor = System.Drawing.Color.Transparent;
+            this.lblHeaderSub.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblHeaderSub.ForeColor = DarkTheme.TextSecondary;
+            this.lblHeaderSub.Location = new System.Drawing.Point(64, 38);
+            this.lblHeaderSub.Name = "lblHeaderSub";
+            this.lblHeaderSub.Size = new System.Drawing.Size(420, 25);
+            this.lblHeaderSub.Text = "Gestion des responsabilités par département";
+
+            // pnlLeft
+            this.pnlLeft.BackColor = DarkTheme.BgCard;
+            this.pnlLeft.Controls.Add(this.lblProf);
+            this.pnlLeft.Controls.Add(this.cbbProfesseur);
+            this.pnlLeft.Controls.Add(this.lblDept);
+            this.pnlLeft.Controls.Add(this.cbbDepartement);
+            this.pnlLeft.Controls.Add(this.btnAdd);
+            this.pnlLeft.Controls.Add(this.btnEdit);
+            this.pnlLeft.Controls.Add(this.btnRemove);
+            this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pnlLeft.Location = new System.Drawing.Point(0, 72);
+            this.pnlLeft.Name = "pnlLeft";
+            this.pnlLeft.Padding = new System.Windows.Forms.Padding(20);
+            this.pnlLeft.Size = new System.Drawing.Size(360, 628);
+
+            // lblProf
+            this.lblProf.AutoSize = true;
+            this.lblProf.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
+            this.lblProf.ForeColor = DarkTheme.TextSecondary;
+            this.lblProf.Location = new System.Drawing.Point(20, 20);
+            this.lblProf.Name = "lblProf";
+            this.lblProf.Size = new System.Drawing.Size(124, 23);
+            this.lblProf.Text = "PROFESSEUR";
+
+            // cbbProfesseur
+            this.cbbProfesseur.BackColor = DarkTheme.BgHover;
+            this.cbbProfesseur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbbProfesseur.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbbProfesseur.ForeColor = DarkTheme.TextPrimary;
+            this.cbbProfesseur.Location = new System.Drawing.Point(20, 45);
+            this.cbbProfesseur.Name = "cbbProfesseur";
+            this.cbbProfesseur.Size = new System.Drawing.Size(320, 36);
+            this.cbbProfesseur.TabIndex = 1;
+
+            // lblDept
+            this.lblDept.AutoSize = true;
+            this.lblDept.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
+            this.lblDept.ForeColor = DarkTheme.TextSecondary;
+            this.lblDept.Location = new System.Drawing.Point(20, 95);
+            this.lblDept.Name = "lblDept";
+            this.lblDept.Size = new System.Drawing.Size(142, 23);
+            this.lblDept.Text = "DÉPARTEMENT";
+
             // cbbDepartement
-            // 
+            this.cbbDepartement.BackColor = DarkTheme.BgHover;
             this.cbbDepartement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbbDepartement.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbbDepartement.FormattingEnabled = true;
-            this.cbbDepartement.Location = new System.Drawing.Point(12, 375);
+            this.cbbDepartement.ForeColor = DarkTheme.TextPrimary;
+            this.cbbDepartement.Location = new System.Drawing.Point(20, 120);
             this.cbbDepartement.Name = "cbbDepartement";
-            this.cbbDepartement.Size = new System.Drawing.Size(326, 36);
-            this.cbbDepartement.TabIndex = 5;
-            this.cbbDepartement.SelectedIndexChanged += new System.EventHandler(this.cbbDepartement_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(52, 73, 94);
-            this.label1.Location = new System.Drawing.Point(12, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 28);
-            this.label1.TabIndex = 50;
-            this.label1.Text = "Nom";
-            // 
-            // btnRemove
-            // 
-            this.btnRemove.BackColor = System.Drawing.Color.FromArgb(231, 76, 60);
-            this.btnRemove.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRemove.FlatAppearance.BorderSize = 0;
-            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemove.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnRemove.ForeColor = System.Drawing.Color.White;
-            this.btnRemove.Location = new System.Drawing.Point(188, 567);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(150, 45);
-            this.btnRemove.TabIndex = 8;
-            this.btnRemove.Text = "Supprimer";
-            this.btnRemove.UseVisualStyleBackColor = false;
-            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(52, 152, 219);
-            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEdit.FlatAppearance.BorderSize = 0;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(188, 511);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(150, 45);
-            this.btnEdit.TabIndex = 7;
-            this.btnEdit.Text = "Modifier";
-            this.btnEdit.UseVisualStyleBackColor = false;
-            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-            // 
+            this.cbbDepartement.Size = new System.Drawing.Size(320, 36);
+            this.cbbDepartement.TabIndex = 2;
+
             // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(39, 174, 96);
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.BackColor = DarkTheme.Amber;
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(188, 455);
+            this.btnAdd.Location = new System.Drawing.Point(20, 200);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(150, 45);
-            this.btnAdd.TabIndex = 6;
-            this.btnAdd.Text = "Ajouter";
+            this.btnAdd.Size = new System.Drawing.Size(320, 40);
+            this.btnAdd.TabIndex = 3;
+            this.btnAdd.Text = "Assigner";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // txtPrenom
-            // 
-            this.txtPrenom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPrenom.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtPrenom.Location = new System.Drawing.Point(12, 162);
-            this.txtPrenom.Name = "txtPrenom";
-            this.txtPrenom.Size = new System.Drawing.Size(326, 34);
-            this.txtPrenom.TabIndex = 2;
-            this.txtPrenom.TextChanged += new System.EventHandler(this.txtPrenom_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(52, 73, 94);
-            this.label2.Location = new System.Drawing.Point(12, 129);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 28);
-            this.label2.TabIndex = 55;
-            this.label2.Text = "Prénom";
-            // 
-            // txtMail
-            // 
-            this.txtMail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMail.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtMail.Location = new System.Drawing.Point(12, 304);
-            this.txtMail.Name = "txtMail";
-            this.txtMail.Size = new System.Drawing.Size(326, 34);
-            this.txtMail.TabIndex = 4;
-            this.txtMail.TextChanged += new System.EventHandler(this.txtMail_TextChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(52, 73, 94);
-            this.label3.Location = new System.Drawing.Point(12, 271);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 28);
-            this.label3.TabIndex = 59;
-            this.label3.Text = "Mail";
-            // 
+
+            // btnEdit
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(36)))));
+            this.btnEdit.FlatAppearance.BorderSize = 1;
+            this.btnEdit.FlatAppearance.BorderColor = DarkTheme.Amber;
+            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnEdit.ForeColor = DarkTheme.Amber;
+            this.btnEdit.Location = new System.Drawing.Point(20, 250);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(155, 40);
+            this.btnEdit.TabIndex = 4;
+            this.btnEdit.Text = "Modifier";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+
+            // btnRemove
+            this.btnRemove.BackColor = DarkTheme.Danger;
+            this.btnRemove.FlatAppearance.BorderSize = 0;
+            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemove.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnRemove.ForeColor = System.Drawing.Color.White;
+            this.btnRemove.Location = new System.Drawing.Point(185, 250);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(155, 40);
+            this.btnRemove.TabIndex = 5;
+            this.btnRemove.Text = "Révoquer";
+            this.btnRemove.UseVisualStyleBackColor = false;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
+
+            // pnlRight
+            this.pnlRight.BackColor = DarkTheme.BgPrincipal;
+            this.pnlRight.Controls.Add(this.dataGridView1);
+            this.pnlRight.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlRight.Location = new System.Drawing.Point(360, 72);
+            this.pnlRight.Name = "pnlRight";
+            this.pnlRight.Padding = new System.Windows.Forms.Padding(16);
+            this.pnlRight.Size = new System.Drawing.Size(740, 628);
+
+            // dataGridView1
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = DarkTheme.BgPrincipal;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(16, 16);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(708, 596);
+            this.dataGridView1.TabIndex = 0;
+
             // frmChefDepartement
-            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(236, 240, 245);
-            this.ClientSize = new System.Drawing.Size(1011, 655);
-            this.ControlBox = false;
-            this.Controls.Add(this.txtMail);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtPrenom);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtTelephone);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtNom);
-            this.Controls.Add(this.cbbDepartement);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnRemove);
-            this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.dataGridView1);
+            this.BackColor = DarkTheme.BgPrincipal;
+            this.ClientSize = new System.Drawing.Size(1100, 700);
+            this.Controls.Add(this.pnlRight);
+            this.Controls.Add(this.pnlLeft);
+            this.Controls.Add(this.pnlHeader);
             this.Name = "frmChefDepartement";
-            this.Text = "Chef Département";
+            this.Text = "Chefs de Département";
+            this.pnlHeader.ResumeLayout(false);
+            this.pnlHeader.PerformLayout();
+            this.pnlLeft.ResumeLayout(false);
+            this.pnlLeft.PerformLayout();
+            this.pnlRight.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
-
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox txtTelephone;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtNom;
+        private APPSenSoutenance.Shared.GradientPanel pnlHeader;
+        private System.Windows.Forms.Label lblHeaderTitle;
+        private System.Windows.Forms.Label lblHeaderSub;
+        private System.Windows.Forms.Panel pnlLeft;
+        private System.Windows.Forms.Panel pnlRight;
+        private System.Windows.Forms.Label lblProf;
+        private System.Windows.Forms.ComboBox cbbProfesseur;
+        private System.Windows.Forms.Label lblDept;
         private System.Windows.Forms.ComboBox cbbDepartement;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnRemove;
-        private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.TextBox txtPrenom;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtMail;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnEdit;
+        private System.Windows.Forms.Button btnRemove;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

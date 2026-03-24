@@ -1,7 +1,6 @@
-using AppSenSoutenance.View.Paramètre;
+using APPSenSoutenance.Views.Parametre;
 using APPSenSoutenance.Shared;
 using APPSenSoutenance.Views.Account;
-using APPSenSoutenance.Views.Parametre;
 using Microsoft.VisualBasic.Devices;
 using System;
 using System.Drawing;
