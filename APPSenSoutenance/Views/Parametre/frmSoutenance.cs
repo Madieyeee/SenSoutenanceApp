@@ -1,4 +1,5 @@
-﻿using APPSenSoutenance.Models;
+using APPSenSoutenance.Models;
+using APPSenSoutenance.Shared;
 using System;
 using System.Linq;
 using System.Windows.Forms;
@@ -10,101 +11,51 @@ namespace APPSenSoutenance.Views.Parametre
         public frmSoutenance()
         {
             InitializeComponent();
+            this.Load += new EventHandler(frmSoutenance_Load);
         }
 
         BdSenSoutenanceContext db = new BdSenSoutenanceContext();
 
-        private void cbbDateSoutenance_SelectedIndexChanged(object sender, EventArgs e)
+        private void frmSoutenance_Load(object sender, EventArgs e)
         {
-            if (cbbDateSoutenance.SelectedIndex > -1)
-            {
-                DateTime selectedDate = DateTime.Parse(cbbDateSoutenance.SelectedItem.ToString());
-                // Effectuez les actions nécessaires avec la date sélectionnée
-            }
+            this.BackColor = DarkTheme.BgPrincipal;
+            DarkTheme.StyleDataGridView(dataGridView1);
+
+            // Remplir les ComboBox
+            cbbMemoire.DataSource = db.Memoires.Select(m => new { m.IdMemoire, m.SujetMemoire }).ToList();
+            cbbMemoire.DisplayMember = "SujetMemoire";
+            cbbMemoire.ValueMember = "IdMemoire";
+
+            RefreshGrid();
         }
 
-        private void txtLieuSoutenance_TextChanged(object sender, EventArgs e)
+        private void RefreshGrid()
         {
-            // Vous pouvez ajouter une validation de longueur si nécessaire
-            if (txtLieuSoutenance.Text.Length > 2000)
-            {
-                txtLieuSoutenance.Text = txtLieuSoutenance.Text.Substring(0, 2000);
-            }
-        }
-
-        private void txtResultatSoutenance_TextChanged(object sender, EventArgs e)
-        {
-            // Validation de longueur maximale
-            if (txtResultatSoutenance.Text.Length > 40)
-            {
-                txtResultatSoutenance.Text = txtResultatSoutenance.Text.Substring(0, 40);
-            }
-        }
-
-        private void txtMentionSoutenance_TextChanged(object sender, EventArgs e)
-        {
-            // Validation de longueur maximale
-            if (txtMentionSoutenance.Text.Length > 100)
-            {
-                txtMentionSoutenance.Text = txtMentionSoutenance.Text.Substring(0, 100);
-            }
-        }
-
-        private void txtObservation_TextChanged(object sender, EventArgs e)
-        {
-            // Validation de longueur maximale
-            if (txtObservation.Text.Length > 5000)
-            {
-                txtObservation.Text = txtObservation.Text.Substring(0, 5000);
-            }
-        }
-
-        private void cbbMemoire_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbbMemoire.SelectedIndex != -1)
-            {
-                // Mise à jour de l'interface ou logique métier si nécessaire
-            }
-        }
-
-        private void Effacer()
-        {
-            cbbDateSoutenance.SelectedValue = "";
-            txtLieuSoutenance.Clear();
-            txtResultatSoutenance.Clear();
-            txtMentionSoutenance.Clear();
-            txtObservation.Clear();
-            cbbMemoire.SelectedValue = "";
             dataGridView1.DataSource = db.Soutenances.ToList();
-            //cbbMemoire.DataSource = filler.FillMemoire();
-            cbbMemoire.DisplayMember = "Text";
-            cbbMemoire.ValueMember = "Value";
-            cbbDateSoutenance.Focus();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            //Soutenance soutenance = new Soutenance();
-            //soutenance.DateSoutenance = DateTime.Parse(cbbDateSoutenance.SelectedValue.ToString());
-            //soutenance.LieuSoutenance = txtLieuSoutenance.Text;
-            //soutenance.ResultatsSoutenance = txtResultatSoutenance.Text;
-            //soutenance.MentionSoutenance = txtMentionSoutenance.Text;
-            //soutenance.ObservationSoutenance = txtObservation.Text;
-            //soutenance.IdMemoire = int.Parse(cbbMemoire.SelectedValue.ToString());
-
-            //db.Soutenances.Add(soutenance);
-            //db.SaveChanges();
-            //Effacer();
+            // TODO: Logique d'ajout - à compléter selon le modèle
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-
+            // TODO: Logique de modification
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
         {
-
+            if (dataGridView1.CurrentRow == null) return;
+            // TODO: Logique de suppression
         }
+
+        // Legacy event handlers
+        private void cbbDateSoutenance_SelectedIndexChanged(object sender, EventArgs e) { }
+        private void txtLieuSoutenance_TextChanged(object sender, EventArgs e) { }
+        private void txtResultatSoutenance_TextChanged(object sender, EventArgs e) { }
+        private void txtMentionSoutenance_TextChanged(object sender, EventArgs e) { }
+        private void txtObservation_TextChanged(object sender, EventArgs e) { }
+        private void cbbMemoire_SelectedIndexChanged(object sender, EventArgs e) { }
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace APPSenSoutenance
+namespace APPSenSoutenance
 {
     partial class FrmConnexion
     {
@@ -7,25 +7,15 @@
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Nettoyage des ressources utilisées.
-        /// </summary>
-        /// <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
-            {
                 components.Dispose();
-            }
             base.Dispose(disposing);
         }
 
         #region Code généré par le Concepteur Windows Form
 
-        /// <summary>
-        /// Méthode requise pour la prise en charge du concepteur - ne modifiez pas
-        /// le contenu de cette méthode avec l'éditeur de code.
-        /// </summary>
         private void InitializeComponent()
         {
             this.panelLeft = new System.Windows.Forms.Panel();
@@ -44,6 +34,7 @@
             this.panelLeft.SuspendLayout();
             this.panelRight.SuspendLayout();
             this.panelConnexion.SuspendLayout();
+            this.panelLeft.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelLeft
@@ -204,7 +195,7 @@
             // 
             // FrmConnexion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1291, 729);
@@ -220,6 +211,7 @@
             this.panelRight.ResumeLayout(false);
             this.panelConnexion.ResumeLayout(false);
             this.panelConnexion.PerformLayout();
+            this.panelLeft.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

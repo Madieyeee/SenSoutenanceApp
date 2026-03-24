@@ -1,373 +1,262 @@
-﻿namespace APPSenSoutenance.Views.Parametre
+using APPSenSoutenance.Shared;
+using System;
+using System.Drawing;
+using System.Windows.Forms;
+
+namespace APPSenSoutenance.Views.Parametre
 {
     partial class frmProfesseur
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
-
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
+            if (disposing && (components != null)) components.Dispose();
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        // ── Contrôles ─────────────────────────────────────────────────
+        private Panel pnlHeader;
+        private Label lblHeaderIcon, lblHeaderTitle, lblHeaderSub;
+        private Panel pnlLeft, pnlRight, pnlActions, pnlSearch;
+        private Label lblNom, lblPrenom, lblTel, lblEmail, lblMdp, lblSpec;
+        private TextBox txtNom, txtPrenom, txtTelephone, txtEmail, txtMotDePasse, txtSpecialite;
+        private Label lblRNom, lblRSpec;
+        private TextBox txtRNom, txtRSpecialite;
+        private DataGridView dgProfesseur;
+        private Button btnAdd, btnEdit, btnRemove, btnSelect;
+        private Panel pnlNom, pnlPrenom, pnlTel, pnlEmail, pnlMdp, pnlSpec;
+        private Panel pnlRNom, pnlRSpec;
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
+        #region Windows Form Designer generated code
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgProfesseur = new System.Windows.Forms.DataGridView();
-            this.btnRemove = new System.Windows.Forms.Button();
-            this.btnEdit = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnSelect = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtNom = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtPrenom = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtTelephone = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtMotDePasse = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtSpecialite = new System.Windows.Forms.TextBox();
-            this.txtRNom = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtRSpecialite = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgProfesseur)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgProfesseur
-            // 
-            this.dgProfesseur.AllowUserToAddRows = false;
-            this.dgProfesseur.AllowUserToDeleteRows = false;
-            this.dgProfesseur.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgProfesseur.BackgroundColor = System.Drawing.Color.White;
-            this.dgProfesseur.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(128)))), ((int)(((byte)(185)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgProfesseur.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgProfesseur.ColumnHeadersHeight = 45;
-            this.dgProfesseur.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgProfesseur.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dgProfesseur.EnableHeadersVisualStyles = false;
-            this.dgProfesseur.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(189)))), ((int)(((byte)(195)))), ((int)(((byte)(199)))));
-            this.dgProfesseur.Location = new System.Drawing.Point(420, 90);
-            this.dgProfesseur.Name = "dgProfesseur";
-            this.dgProfesseur.ReadOnly = true;
-            this.dgProfesseur.RowHeadersVisible = false;
-            this.dgProfesseur.RowHeadersWidth = 62;
-            this.dgProfesseur.RowTemplate.Height = 35;
-            this.dgProfesseur.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgProfesseur.Size = new System.Drawing.Size(629, 577);
-            this.dgProfesseur.TabIndex = 0;
-            // 
-            // btnRemove
-            // 
-            this.btnRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(76)))), ((int)(((byte)(60)))));
-            this.btnRemove.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRemove.FlatAppearance.BorderSize = 0;
-            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemove.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnRemove.ForeColor = System.Drawing.Color.White;
-            this.btnRemove.Location = new System.Drawing.Point(230, 601);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(150, 45);
-            this.btnRemove.TabIndex = 9;
-            this.btnRemove.Text = "Supprimer";
-            this.btnRemove.UseVisualStyleBackColor = false;
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEdit.FlatAppearance.BorderSize = 0;
-            this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(230, 546);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(150, 45);
-            this.btnEdit.TabIndex = 8;
-            this.btnEdit.Text = "Modifier";
-            this.btnEdit.UseVisualStyleBackColor = false;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(174)))), ((int)(((byte)(96)))));
-            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(230, 491);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(150, 45);
-            this.btnAdd.TabIndex = 7;
-            this.btnAdd.Text = "Ajouter";
-            this.btnAdd.UseVisualStyleBackColor = false;
-            // 
-            // btnSelect
-            // 
-            this.btnSelect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(89)))), ((int)(((byte)(182)))));
-            this.btnSelect.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSelect.FlatAppearance.BorderSize = 0;
-            this.btnSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSelect.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnSelect.ForeColor = System.Drawing.Color.White;
-            this.btnSelect.Location = new System.Drawing.Point(20, 15);
-            this.btnSelect.Name = "btnSelect";
-            this.btnSelect.Size = new System.Drawing.Size(150, 45);
-            this.btnSelect.TabIndex = 10;
-            this.btnSelect.Text = "Sélectionner";
-            this.btnSelect.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.label1.Location = new System.Drawing.Point(20, 72);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 28);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Nom:";
-            // 
-            // txtNom
-            // 
-            this.txtNom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNom.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtNom.Location = new System.Drawing.Point(20, 107);
-            this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(360, 34);
-            this.txtNom.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.label2.Location = new System.Drawing.Point(20, 140);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 28);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Prénom:";
-            // 
-            // txtPrenom
-            // 
-            this.txtPrenom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPrenom.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtPrenom.Location = new System.Drawing.Point(20, 171);
-            this.txtPrenom.Name = "txtPrenom";
-            this.txtPrenom.Size = new System.Drawing.Size(360, 34);
-            this.txtPrenom.TabIndex = 2;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.label3.Location = new System.Drawing.Point(20, 200);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 28);
-            this.label3.TabIndex = 15;
-            this.label3.Text = "Téléphone:";
-            // 
-            // txtTelephone
-            // 
-            this.txtTelephone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTelephone.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtTelephone.Location = new System.Drawing.Point(20, 235);
-            this.txtTelephone.Name = "txtTelephone";
-            this.txtTelephone.Size = new System.Drawing.Size(360, 34);
-            this.txtTelephone.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.label4.Location = new System.Drawing.Point(20, 267);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 28);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Email:";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtEmail.Location = new System.Drawing.Point(20, 302);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(360, 34);
-            this.txtEmail.TabIndex = 4;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.label5.Location = new System.Drawing.Point(20, 335);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(143, 28);
-            this.label5.TabIndex = 19;
-            this.label5.Text = "Mot de passe:";
-            // 
-            // txtMotDePasse
-            // 
-            this.txtMotDePasse.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMotDePasse.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtMotDePasse.Location = new System.Drawing.Point(20, 370);
-            this.txtMotDePasse.Name = "txtMotDePasse";
-            this.txtMotDePasse.PasswordChar = '*';
-            this.txtMotDePasse.Size = new System.Drawing.Size(360, 34);
-            this.txtMotDePasse.TabIndex = 5;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.label6.Location = new System.Drawing.Point(20, 404);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 28);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "Spécialité:";
-            // 
-            // txtSpecialite
-            // 
-            this.txtSpecialite.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSpecialite.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtSpecialite.Location = new System.Drawing.Point(20, 439);
-            this.txtSpecialite.Name = "txtSpecialite";
-            this.txtSpecialite.Size = new System.Drawing.Size(360, 34);
-            this.txtSpecialite.TabIndex = 6;
-            // 
-            // txtRNom
-            // 
-            this.txtRNom.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtRNom.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtRNom.Location = new System.Drawing.Point(559, 31);
-            this.txtRNom.Name = "txtRNom";
-            this.txtRNom.Size = new System.Drawing.Size(200, 34);
-            this.txtRNom.TabIndex = 11;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.label7.Location = new System.Drawing.Point(557, 6);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(53, 25);
-            this.label7.TabIndex = 24;
-            this.label7.Text = "Nom";
-            // 
-            // txtRSpecialite
-            // 
-            this.txtRSpecialite.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtRSpecialite.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtRSpecialite.Location = new System.Drawing.Point(787, 31);
-            this.txtRSpecialite.Name = "txtRSpecialite";
-            this.txtRSpecialite.Size = new System.Drawing.Size(200, 34);
-            this.txtRSpecialite.TabIndex = 12;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.label8.Location = new System.Drawing.Point(785, 6);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(94, 25);
-            this.label8.TabIndex = 26;
-            this.label8.Text = "Spécialité";
-            // 
-            // frmProfesseur
-            // 
-            this.ClientSize = new System.Drawing.Size(1087, 679);
-            this.ControlBox = false;
-            this.Controls.Add(this.txtRSpecialite);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.txtRNom);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtSpecialite);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtMotDePasse);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtTelephone);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtPrenom);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtNom);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnSelect);
-            this.Controls.Add(this.btnRemove);
-            this.Controls.Add(this.btnEdit);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.dgProfesseur);
-            this.Name = "frmProfesseur";
-            this.Text = "Professeur";
-            ((System.ComponentModel.ISupportInitialize)(this.dgProfesseur)).EndInit();
+
+            // ── HEADER ────────────────────────────────────────────────
+            this.pnlHeader = new GradientPanel
+            {
+                Dock         = DockStyle.Top,
+                Height       = 72,
+                GradientStart = Color.FromArgb(28, 25, 23),
+                GradientEnd   = Color.FromArgb(20, 18, 16)
+            };
+
+            this.lblHeaderIcon  = MakeLabel("👨‍🏫", new Font("Segoe UI Emoji", 22f), DarkTheme.Amber,  new Point(18, 12), false);
+            this.lblHeaderTitle = MakeLabel("Gestion des Professeurs", new Font("Segoe UI", 15f, FontStyle.Bold), DarkTheme.TextTitle, new Point(62, 10), false);
+            this.lblHeaderSub   = MakeLabel("Ajouter, modifier et consulter les professeurs", new Font("Segoe UI", 9f), DarkTheme.TextSecondary, new Point(64, 38), false);
+
+            var hdrLine = new Panel { Dock = DockStyle.Bottom, Height = 2, BackColor = DarkTheme.Amber };
+            this.pnlHeader.Controls.AddRange(new Control[] { this.lblHeaderIcon, this.lblHeaderTitle, this.lblHeaderSub, hdrLine });
+
+            // ── PANEL GAUCHE (formulaire) ─────────────────────────────
+            this.pnlLeft = new Panel
+            {
+                Width     = 340,
+                Dock      = DockStyle.Left,
+                BackColor = DarkTheme.BgCard,
+                Padding   = new Padding(20, 16, 20, 0)
+            };
+
+            // Champs
+            int y = 16;
+            (lblNom,    pnlNom,    txtNom)          = MakeField("NOM",               y,          300); y += 68;
+            (lblPrenom, pnlPrenom, txtPrenom)        = MakeField("PRÉNOM",            y,          300); y += 68;
+            (lblTel,    pnlTel,    txtTelephone)     = MakeField("TÉLÉPHONE",          y,          300); y += 68;
+            (lblEmail,  pnlEmail,  txtEmail)         = MakeField("EMAIL",             y,          300); y += 68;
+            (lblMdp,    pnlMdp,    txtMotDePasse)    = MakeField("MOT DE PASSE",      y,          300, isPassword: true); y += 68;
+            (lblSpec,   pnlSpec,   txtSpecialite)    = MakeField("SPÉCIALITÉ",        y,          300); y += 80;
+
+            // Boutons actions
+            this.pnlActions = new Panel
+            {
+                Location  = new Point(20, y),
+                Size      = new Size(300, 96),
+                BackColor = Color.Transparent
+            };
+
+            this.btnAdd    = MakePremiumBtn("+ Ajouter",    new Point(0, 0),   new Size(145, 40), DarkTheme.Amber,   this.btnAdd_Click);
+            this.btnSelect = MakePremiumBtn("↑ Sélect.",   new Point(153, 0),  new Size(147, 40), DarkTheme.Emerald, this.btnSelect_Click);
+            this.btnEdit   = MakePremiumBtn("✎ Modifier",   new Point(0, 50),   new Size(145, 40), Color.FromArgb(41,37,36), this.btnEdit_Click, amber: true);
+            this.btnRemove = MakePremiumBtn("✕ Supprimer", new Point(153, 50), new Size(147, 40), DarkTheme.Danger,  this.btnRemove_Click);
+
+            this.pnlActions.Controls.AddRange(new Control[] { btnAdd, btnSelect, btnEdit, btnRemove });
+
+            this.pnlLeft.Controls.AddRange(new Control[]
+            {
+                lblNom, pnlNom, lblPrenom, pnlPrenom,
+                lblTel, pnlTel, lblEmail, pnlEmail,
+                lblMdp, pnlMdp, lblSpec, pnlSpec,
+                pnlActions
+            });
+
+            // ── PANEL DROIT (tableau) ─────────────────────────────────
+            this.pnlRight = new Panel
+            {
+                Dock      = DockStyle.Fill,
+                BackColor = DarkTheme.BgPrincipal,
+                Padding   = new Padding(16, 12, 16, 16)
+            };
+
+            // Barre de recherche
+            this.pnlSearch = new RoundedPanel
+            {
+                BackColor    = DarkTheme.BgCard,
+                Size         = new Size(600, 38),
+                Location     = new Point(16, 12),
+                CornerRadius = 8,
+                ShowBorder   = true,
+                BorderColor  = DarkTheme.BgBorder,
+                ShowShadow   = false
+            };
+
+            this.lblRNom  = MakeLabel("Nom :", new Font("Segoe UI", 8.5f, FontStyle.Bold), DarkTheme.TextSecondary, new Point(8, 10), true);
+            this.txtRNom  = MakeSearchBox(new Point(55, 6), 130);
+            this.lblRSpec = MakeLabel("Spécialité :", new Font("Segoe UI", 8.5f, FontStyle.Bold), DarkTheme.TextSecondary, new Point(202, 10), true);
+            this.txtRSpecialite = MakeSearchBox(new Point(286, 6), 130);
+
+            this.pnlSearch.Controls.AddRange(new Control[] { lblRNom, txtRNom, lblRSpec, txtRSpecialite });
+
+            // DataGridView
+            var dgStyle1 = new DataGridViewCellStyle
+            {
+                Alignment        = DataGridViewContentAlignment.MiddleLeft,
+                BackColor        = Color.FromArgb(32, 29, 27),
+                Font             = new Font("Segoe UI", 9f, FontStyle.Bold),
+                ForeColor        = DarkTheme.Amber,
+                Padding          = new Padding(10, 0, 0, 0),
+                SelectionBackColor = Color.FromArgb(32, 29, 27),
+                SelectionForeColor = DarkTheme.AmberHover,
+                WrapMode         = DataGridViewTriState.True
+            };
+            var dgStyle2 = new DataGridViewCellStyle
+            {
+                Alignment        = DataGridViewContentAlignment.MiddleLeft,
+                BackColor        = DarkTheme.BgCard,
+                Font             = new Font("Segoe UI", 10f),
+                ForeColor        = DarkTheme.TextPrimary,
+                Padding          = new Padding(10, 0, 0, 0),
+                SelectionBackColor = DarkTheme.BgHover,
+                SelectionForeColor = DarkTheme.Amber,
+                WrapMode         = DataGridViewTriState.False
+            };
+
+            this.dgProfesseur = new DataGridView
+            {
+                AllowUserToAddRows           = false,
+                AllowUserToDeleteRows        = false,
+                AutoSizeColumnsMode          = DataGridViewAutoSizeColumnsMode.Fill,
+                BackgroundColor              = DarkTheme.BgPrincipal,
+                BorderStyle                  = BorderStyle.None,
+                CellBorderStyle             = DataGridViewCellBorderStyle.SingleHorizontal,
+                ColumnHeadersBorderStyle     = DataGridViewHeaderBorderStyle.None,
+                ColumnHeadersDefaultCellStyle = dgStyle1,
+                ColumnHeadersHeight          = 42,
+                ColumnHeadersHeightSizeMode  = DataGridViewColumnHeadersHeightSizeMode.DisableResizing,
+                DefaultCellStyle             = dgStyle2,
+                EnableHeadersVisualStyles    = false,
+                GridColor                    = DarkTheme.BgBorder,
+                Location                     = new Point(16, 62),
+                Name                         = "dgProfesseur",
+                ReadOnly                     = true,
+                RowHeadersVisible            = false,
+                RowTemplate                  = { Height = 38 },
+                SelectionMode               = DataGridViewSelectionMode.FullRowSelect,
+                Anchor                       = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right,
+                Size                         = new Size(700, 500)
+            };
+            this.dgProfesseur.AlternatingRowsDefaultCellStyle = new DataGridViewCellStyle
+            {
+                BackColor = Color.FromArgb(22, 20, 18),
+                ForeColor = DarkTheme.TextPrimary
+            };
+
+            this.pnlRight.Controls.AddRange(new Control[] { pnlSearch, dgProfesseur });
+
+            // ── FORM ──────────────────────────────────────────────────
+            this.AutoScaleDimensions = new SizeF(8f, 16f);
+            this.AutoScaleMode       = AutoScaleMode.Font;
+            this.BackColor           = DarkTheme.BgPrincipal;
+            this.ClientSize          = new Size(1120, 700);
+            this.ControlBox          = false;
+            this.Name                = "frmProfesseur";
+            this.Text                = "Professeurs";
+            this.Font                = new Font("Segoe UI", 9.5f);
+
+            this.Controls.Add(this.pnlRight);
+            this.Controls.Add(this.pnlLeft);
+            this.Controls.Add(this.pnlHeader);
+
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
-
         #endregion
 
-        private System.Windows.Forms.DataGridView dgProfesseur;
-        private System.Windows.Forms.Button btnRemove;
-        private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnSelect;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtNom;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtPrenom;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtTelephone;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtMotDePasse;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtSpecialite;
-        private System.Windows.Forms.TextBox txtRNom;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtRSpecialite;
-        private System.Windows.Forms.Label label8;
+        // ── Helpers ───────────────────────────────────────────────────
+        private Label MakeLabel(string text, Font font, Color color, Point loc, bool autoSize)
+            => new Label { Text = text, Font = font, ForeColor = color, BackColor = Color.Transparent, Location = loc, AutoSize = autoSize };
+
+        private (Label, Panel, TextBox) MakeField(string labelText, int y, int width, bool isPassword = false)
+        {
+            var lbl = new Label
+            {
+                Text      = labelText,
+                Font      = new Font("Segoe UI", 8f, FontStyle.Bold),
+                ForeColor = DarkTheme.TextSecondary,
+                BackColor = Color.Transparent,
+                AutoSize  = true,
+                Location  = new Point(20, y)
+            };
+            var pnl = new RoundedPanel
+            {
+                BackColor    = DarkTheme.BgHover,
+                Location     = new Point(20, y + 20),
+                Size         = new Size(width, 40),
+                CornerRadius = 8,
+                ShowBorder   = true,
+                BorderColor  = DarkTheme.BgBorder,
+                ShowShadow   = false
+            };
+            var txt = new TextBox
+            {
+                BorderStyle         = BorderStyle.None,
+                BackColor           = DarkTheme.BgHover,
+                ForeColor           = DarkTheme.TextPrimary,
+                Font                = new Font("Segoe UI", 10.5f),
+                Location            = new Point(10, 9),
+                Width               = width - 22,
+                UseSystemPasswordChar = isPassword
+            };
+            pnl.Controls.Add(txt);
+            return (lbl, pnl, txt);
+        }
+
+        private TextBox MakeSearchBox(Point loc, int width) => new TextBox
+        {
+            BorderStyle = BorderStyle.None,
+            BackColor   = DarkTheme.BgCard,
+            ForeColor   = DarkTheme.TextPrimary,
+            Font        = new Font("Segoe UI", 9.5f),
+            Location    = loc,
+            Width       = width
+        };
+
+        private Button MakePremiumBtn(string text, Point loc, Size size, Color bg, EventHandler handler, bool amber = false)
+        {
+            var btn = new Button
+            {
+                Text      = text,
+                Location  = loc,
+                Size      = size,
+                Font      = new Font("Segoe UI", 9.5f, FontStyle.Bold),
+                ForeColor = amber ? DarkTheme.Amber : Color.White,
+                BackColor = bg,
+                FlatStyle = FlatStyle.Flat,
+                Cursor    = Cursors.Hand
+            };
+            btn.FlatAppearance.BorderSize = amber ? 1 : 0;
+            if (amber) btn.FlatAppearance.BorderColor = DarkTheme.Amber;
+            btn.Click += handler;
+            return btn;
+        }
     }
 }
