@@ -80,5 +80,10 @@ namespace APPSenSoutenance
             }
             return sBuilder.ToString();
         }
+
+        private void lblBrand_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

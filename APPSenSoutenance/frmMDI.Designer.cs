@@ -1,210 +1,269 @@
+using APPSenSoutenance.Shared;
+using System;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
+
 namespace APPSenSoutenance
 {
     partial class frmMDI
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
+            if (disposing && (components != null)) components.Dispose();
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        // ── Contrôles déclarés ────────────────────────────────────────
+        private SidebarPanel pnlSidebar;
+        private Panel pnlMdiContainer;
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
+        // Sidebar controls
+        private Label lblLogo;
+        private Label lblLogoSub;
+        private Panel pnlLogoDivider;
+
+        private Label lblNavSection1;
+        private Button btnAnneeAcademique;
+        private Button btnSession;
+        private Button btnProfesseur;
+        private Button btnDepartement;
+        private Button btnChefDepartement;
+
+        private Label lblNavSection2;
+        private Button btnSoutenance;
+        private Button btnMemoire;
+
+        private Label lblNavSection3;
+        private Button btnUtilisateur;
+
+        private Panel pnlSidebarFooter;
+        private Label lblClock;
+        private Label lblDate;
+        private Button btnDeconnexion;
+        private Button btnQuitter;
+
+        private System.Windows.Forms.Timer timerClock;
+
+        #region Windows Form Designer generated code
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.actionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.seDeconnecterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quitterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.parametreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.anneeAcadmiqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sessionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.professeurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.soutenanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.memoireToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chefDeDepartementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.departementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.securiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.utilisateurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(28, 25, 23);   // #1C1917
-            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.actionToolStripMenuItem,
-            this.parametreToolStripMenuItem,
-            this.securiteToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(10, 5, 0, 5);
-            this.menuStrip1.Size = new System.Drawing.Size(800, 44);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // actionToolStripMenuItem
-            // 
-            this.actionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.seDeconnecterToolStripMenuItem,
-            this.quitterToolStripMenuItem});
-            this.actionToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(231, 229, 228);  // TextPrimary
-            this.actionToolStripMenuItem.Name = "actionToolStripMenuItem";
-            this.actionToolStripMenuItem.Size = new System.Drawing.Size(96, 34);
-            this.actionToolStripMenuItem.Text = "&Action";
-            // 
-            // seDeconnecterToolStripMenuItem
-            // 
-            this.seDeconnecterToolStripMenuItem.Name = "seDeconnecterToolStripMenuItem";
-            this.seDeconnecterToolStripMenuItem.Size = new System.Drawing.Size(275, 38);
-            this.seDeconnecterToolStripMenuItem.Text = "&Se déconnecter";
-            this.seDeconnecterToolStripMenuItem.Click += new System.EventHandler(this.seDeconnecterToolStripMenuItem_Click);
-            // 
-            // quitterToolStripMenuItem
-            // 
-            this.quitterToolStripMenuItem.Name = "quitterToolStripMenuItem";
-            this.quitterToolStripMenuItem.Size = new System.Drawing.Size(275, 38);
-            this.quitterToolStripMenuItem.Text = "&Quitter";
-            this.quitterToolStripMenuItem.Click += new System.EventHandler(this.quitterToolStripMenuItem_Click);
-            // 
-            // parametreToolStripMenuItem
-            // 
-            this.parametreToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.anneeAcadmiqueToolStripMenuItem,
-            this.sessionToolStripMenuItem,
-            this.professeurToolStripMenuItem,
-            this.soutenanceToolStripMenuItem,
-            this.memoireToolStripMenuItem,
-            this.chefDeDepartementToolStripMenuItem,
-            this.departementToolStripMenuItem});
-            this.parametreToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(231, 229, 228);
-            this.parametreToolStripMenuItem.Name = "parametreToolStripMenuItem";
-            this.parametreToolStripMenuItem.Size = new System.Drawing.Size(147, 34);
-            this.parametreToolStripMenuItem.Text = "&Paramètres";
-            // 
-            // anneeAcadmiqueToolStripMenuItem
-            // 
-            this.anneeAcadmiqueToolStripMenuItem.Name = "anneeAcadmiqueToolStripMenuItem";
-            this.anneeAcadmiqueToolStripMenuItem.Size = new System.Drawing.Size(338, 38);
-            this.anneeAcadmiqueToolStripMenuItem.Text = "&Année académique";
-            this.anneeAcadmiqueToolStripMenuItem.Click += new System.EventHandler(this.anneeAcadmiqueToolStripMenuItem_Click);
-            // 
-            // sessionToolStripMenuItem
-            // 
-            this.sessionToolStripMenuItem.Name = "sessionToolStripMenuItem";
-            this.sessionToolStripMenuItem.Size = new System.Drawing.Size(338, 38);
-            this.sessionToolStripMenuItem.Text = "&Session";
-            this.sessionToolStripMenuItem.Click += new System.EventHandler(this.sessionToolStripMenuItem_Click);
-            // 
-            // professeurToolStripMenuItem
-            // 
-            this.professeurToolStripMenuItem.Name = "professeurToolStripMenuItem";
-            this.professeurToolStripMenuItem.Size = new System.Drawing.Size(338, 38);
-            this.professeurToolStripMenuItem.Text = "&Professeur";
-            this.professeurToolStripMenuItem.Click += new System.EventHandler(this.professeurToolStripMenuItem_Click);
-            // 
-            // soutenanceToolStripMenuItem
-            // 
-            this.soutenanceToolStripMenuItem.Name = "soutenanceToolStripMenuItem";
-            this.soutenanceToolStripMenuItem.Size = new System.Drawing.Size(338, 38);
-            this.soutenanceToolStripMenuItem.Text = "&Soutenance";
-            this.soutenanceToolStripMenuItem.Click += new System.EventHandler(this.soutenanceToolStripMenuItem_Click);
-            // 
-            // memoireToolStripMenuItem
-            // 
-            this.memoireToolStripMenuItem.Name = "memoireToolStripMenuItem";
-            this.memoireToolStripMenuItem.Size = new System.Drawing.Size(338, 38);
-            this.memoireToolStripMenuItem.Text = "&Mémoire";
-            this.memoireToolStripMenuItem.Click += new System.EventHandler(this.memoireToolStripMenuItem_Click);
-            // 
-            // chefDeDepartementToolStripMenuItem
-            // 
-            this.chefDeDepartementToolStripMenuItem.Name = "chefDeDepartementToolStripMenuItem";
-            this.chefDeDepartementToolStripMenuItem.Size = new System.Drawing.Size(338, 38);
-            this.chefDeDepartementToolStripMenuItem.Text = "&Chef de département";
-            this.chefDeDepartementToolStripMenuItem.Click += new System.EventHandler(this.chefDeDepartementToolStripMenuItem_Click);
-            // 
-            // departementToolStripMenuItem
-            // 
-            this.departementToolStripMenuItem.Name = "departementToolStripMenuItem";
-            this.departementToolStripMenuItem.Size = new System.Drawing.Size(338, 38);
-            this.departementToolStripMenuItem.Text = "&Département";
-            this.departementToolStripMenuItem.Click += new System.EventHandler(this.departementToolStripMenuItem_Click);
-            // 
-            // securiteToolStripMenuItem
-            // 
-            this.securiteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.utilisateurToolStripMenuItem});
-            this.securiteToolStripMenuItem.ForeColor = System.Drawing.Color.FromArgb(231, 229, 228);
-            this.securiteToolStripMenuItem.Name = "securiteToolStripMenuItem";
-            this.securiteToolStripMenuItem.Size = new System.Drawing.Size(113, 34);
-            this.securiteToolStripMenuItem.Text = "Sécurité";
-            this.securiteToolStripMenuItem.Click += new System.EventHandler(this.securiteToolStripMenuItem_Click);
-            // 
-            // utilisateurToolStripMenuItem
-            // 
-            this.utilisateurToolStripMenuItem.Name = "utilisateurToolStripMenuItem";
-            this.utilisateurToolStripMenuItem.Size = new System.Drawing.Size(271, 38);
-            this.utilisateurToolStripMenuItem.Text = "👥 Utilisateurs";
-            this.utilisateurToolStripMenuItem.Click += new System.EventHandler(this.utilisateurToolStripMenuItem_Click);
-            // 
-            // frmMDI
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(12, 10, 9);   // #0C0A09 dark principal
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.ControlBox = false;
-            this.Controls.Add(this.menuStrip1);
-            this.IsMdiContainer = true;
-            this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "frmMDI";
-            this.ForeColor = System.Drawing.Color.FromArgb(231, 229, 228);
-            this.Text = "🎓 Sen Soutenance :: Gestion";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmMDI_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            this.components = new System.ComponentModel.Container();
 
+            // ── MDI area ──────────────────────────────────────────────
+            this.pnlMdiContainer = new Panel
+            {
+                BackColor    = DarkTheme.BgPrincipal,
+                Dock         = DockStyle.Fill,
+                Padding      = new Padding(0)
+            };
+
+            // ── SIDEBAR ───────────────────────────────────────────────
+            this.pnlSidebar = new SidebarPanel
+            {
+                Width        = 220,
+                Dock         = DockStyle.Left,
+                BackColor    = Color.FromArgb(15, 12, 11)
+            };
+
+            // Logo
+            this.lblLogo = new Label
+            {
+                Text      = "🎓 SenSoutenance",
+                Font      = new Font("Segoe UI", 13f, FontStyle.Bold),
+                ForeColor = DarkTheme.Amber,
+                BackColor = Color.Transparent,
+                AutoSize  = false,
+                Size      = new Size(220, 42),
+                Location  = new Point(0, 18),
+                TextAlign = ContentAlignment.MiddleCenter
+            };
+
+            this.lblLogoSub = new Label
+            {
+                Text      = "Gestion académique",
+                Font      = new Font("Segoe UI", 8.5f),
+                ForeColor = DarkTheme.TextSecondary,
+                BackColor = Color.Transparent,
+                AutoSize  = false,
+                Size      = new Size(220, 20),
+                Location  = new Point(0, 58),
+                TextAlign = ContentAlignment.MiddleCenter
+            };
+
+            this.pnlLogoDivider = new Panel
+            {
+                Height    = 1,
+                Width     = 180,
+                Location  = new Point(20, 88),
+                BackColor = DarkTheme.BgBorder
+            };
+
+            // ── Section PARAMÈTRES ────────────────────────────────────
+            this.lblNavSection1 = MakeSectionLabel("PARAMÈTRES", new Point(16, 106));
+            this.btnAnneeAcademique  = MakeNavButton("📅  Année Académique",  new Point(0, 126), this.btnAnneeAcademique_Click);
+            this.btnSession          = MakeNavButton("🗓  Session",            new Point(0, 166), this.btnSession_Click);
+            this.btnProfesseur       = MakeNavButton("👨‍🏫  Professeurs",        new Point(0, 206), this.btnProfesseur_Click);
+            this.btnDepartement      = MakeNavButton("🏛  Départements",       new Point(0, 246), this.btnDepartement_Click);
+            this.btnChefDepartement  = MakeNavButton("👤  Chefs Dept.",        new Point(0, 286), this.btnChefDepartement_Click);
+
+            // ── Section ACADÉMIQUE ────────────────────────────────────
+            this.lblNavSection2 = MakeSectionLabel("ACADÉMIQUE", new Point(16, 336));
+            this.btnSoutenance   = MakeNavButton("🎓  Soutenances", new Point(0, 356), this.btnSoutenance_Click);
+            this.btnMemoire      = MakeNavButton("📄  Mémoires",    new Point(0, 396), this.btnMemoire_Click);
+
+            // ── Section SÉCURITÉ ─────────────────────────────────────
+            this.lblNavSection3 = MakeSectionLabel("SÉCURITÉ", new Point(16, 446));
+            this.btnUtilisateur  = MakeNavButton("🔐  Utilisateurs", new Point(0, 466), this.btnUtilisateur_Click);
+
+            // ── Footer sidebar ────────────────────────────────────────
+            this.pnlSidebarFooter = new Panel
+            {
+                Dock      = DockStyle.Bottom,
+                Height    = 130,
+                BackColor = Color.FromArgb(10, 8, 7)
+            };
+
+            this.lblClock = new Label
+            {
+                Text      = "00:00",
+                Font      = new Font("Segoe UI", 26f, FontStyle.Bold),
+                ForeColor = DarkTheme.Amber,
+                BackColor = Color.Transparent,
+                AutoSize  = false,
+                Size      = new Size(220, 40),
+                Location  = new Point(0, 8),
+                TextAlign = ContentAlignment.MiddleCenter
+            };
+
+            this.lblDate = new Label
+            {
+                Text      = "",
+                Font      = new Font("Segoe UI", 8f),
+                ForeColor = DarkTheme.TextSecondary,
+                BackColor = Color.Transparent,
+                AutoSize  = false,
+                Size      = new Size(220, 18),
+                Location  = new Point(0, 48),
+                TextAlign = ContentAlignment.MiddleCenter
+            };
+
+            this.btnDeconnexion = MakeFooterButton("⏻  Déconnexion", new Point(10, 70), DarkTheme.Danger, this.btnDeconnexion_Click);
+            this.btnQuitter     = MakeFooterButton("✕  Quitter",     new Point(115, 70), Color.FromArgb(50, 50, 55), this.btnQuitter_Click);
+
+            this.pnlSidebarFooter.Controls.AddRange(new Control[]
+            { this.lblClock, this.lblDate, this.btnDeconnexion, this.btnQuitter });
+
+            // ── Assemblage sidebar ────────────────────────────────────
+            this.pnlSidebar.Controls.AddRange(new Control[]
+            {
+                this.lblLogo, this.lblLogoSub, this.pnlLogoDivider,
+                this.lblNavSection1,
+                this.btnAnneeAcademique, this.btnSession, this.btnProfesseur,
+                this.btnDepartement, this.btnChefDepartement,
+                this.lblNavSection2,
+                this.btnSoutenance, this.btnMemoire,
+                this.lblNavSection3,
+                this.btnUtilisateur,
+                this.pnlSidebarFooter
+            });
+
+            // ── Timer horloge ─────────────────────────────────────────
+            this.timerClock = new System.Windows.Forms.Timer(this.components)
+            { Interval = 30000 };
+            this.timerClock.Tick += new EventHandler(this.timerClock_Tick);
+
+            // ── Form MDI ──────────────────────────────────────────────
+            this.IsMdiContainer  = true;
+            this.BackColor       = DarkTheme.BgPrincipal;
+            this.WindowState     = FormWindowState.Maximized;
+            this.Text            = "Sen Soutenance";
+            this.Name            = "frmMDI";
+            this.Font            = new Font("Segoe UI", 9.5f);
+            this.Load           += new EventHandler(this.frmMDI_Load);
+
+            this.Controls.Add(this.pnlMdiContainer);
+            this.Controls.Add(this.pnlSidebar);
+
+            // ── Pointer la zone MDI vers le panel ─────────────────────
+            // (WinForms utilise automatiquement le dernier contrôle Fill comme MdiClient zone)
+        }
+
+        // ── Factory helpers ───────────────────────────────────────────
+        private Label MakeSectionLabel(string text, Point loc) => new Label
+        {
+            Text      = text,
+            Font      = new Font("Segoe UI", 7.5f, FontStyle.Bold),
+            ForeColor = Color.FromArgb(80, 80, 80),
+            BackColor = Color.Transparent,
+            AutoSize  = true,
+            Location  = loc
+        };
+
+        private Button MakeNavButton(string text, Point loc, EventHandler handler)
+        {
+            var btn = new Button
+            {
+                Text      = text,
+                Font      = new Font("Segoe UI", 10f),
+                ForeColor = DarkTheme.TextSecondary,
+                BackColor = Color.Transparent,
+                FlatStyle = FlatStyle.Flat,
+                TextAlign = ContentAlignment.MiddleLeft,
+                Padding   = new Padding(14, 0, 0, 0),
+                Cursor    = Cursors.Hand,
+                Size      = new Size(220, 38),
+                Location  = loc
+            };
+            btn.FlatAppearance.BorderSize      = 0;
+            btn.FlatAppearance.MouseOverBackColor = Color.FromArgb(25, 217, 119, 6);
+            btn.FlatAppearance.MouseDownBackColor = Color.FromArgb(40, 217, 119, 6);
+            btn.Click += handler;
+            btn.MouseEnter += (s, e) => { if (btn.BackColor == Color.Transparent) btn.ForeColor = DarkTheme.Amber; };
+            btn.MouseLeave += (s, e) => { if (btn.BackColor == Color.Transparent) btn.ForeColor = DarkTheme.TextSecondary; };
+            return btn;
+        }
+
+        private Button MakeFooterButton(string text, Point loc, Color bg, EventHandler handler)
+        {
+            var btn = new Button
+            {
+                Text      = text,
+                Font      = new Font("Segoe UI", 8.5f, FontStyle.Bold),
+                ForeColor = Color.White,
+                BackColor = bg,
+                FlatStyle = FlatStyle.Flat,
+                Cursor    = Cursors.Hand,
+                Size      = new Size(95, 32),
+                Location  = loc
+            };
+            btn.FlatAppearance.BorderSize = 0;
+            btn.Click += handler;
+            return btn;
         }
 
         #endregion
+    }
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem actionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem seDeconnecterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quitterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem parametreToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem anneeAcadmiqueToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem professeurToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem sessionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem soutenanceToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem memoireToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem chefDeDepartementToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem departementToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem securiteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem utilisateurToolStripMenuItem;
+    // ══════════════════════════════════════════════════════════════════════
+    //  SIDEBAR PANEL CUSTOM (GDI+ peint)
+    // ══════════════════════════════════════════════════════════════════════
+    public class SidebarPanel : Panel
+    {
+        public SidebarPanel() { this.DoubleBuffered = true; }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+            var g = e.Graphics;
+
+            // Ligne verticale ambre à droite
+            using (var brush = new LinearGradientBrush(
+                new Rectangle(Width - 2, 0, 2, Height),
+                Color.Transparent, DarkTheme.Amber, LinearGradientMode.Vertical))
+                g.FillRectangle(brush, Width - 2, 0, 2, Height);
+        }
     }
 }
