@@ -9,17 +9,17 @@ Application de bureau Windows Forms pour la gestion complète des soutenances ac
 
 ## 📋 Table des matières
 
-- [Aperçu](#aperçu)
-- [Fonctionnalités](#fonctionnalités)
-- [Technologies utilisées](#technologies-utilisées)
-- [Prérequis](#prérequis)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Structure du projet](#structure-du-projet)
-- [Captures d'écran](#captures-décran)
-- [Utilisation](#utilisation)
-- [Contributeurs](#contributeurs)
-- [Licence](#licence)
+- [Aperçu](#-aperçu)
+- [Fonctionnalités](#-fonctionnalités)
+- [Technologies utilisées](#-technologies-utilisées)
+- [Prérequis](#-prérequis)
+- [Installation](#-installation)
+- [Configuration](#-configuration)
+- [Structure du projet](#-structure-du-projet)
+- [Captures d'écran](#-captures-décran)
+- [Utilisation](#-utilisation)
+- [Contributeurs](#-contributeurs)
+- [Licence](#-licence)
 
 ## 🎯 Aperçu
 
