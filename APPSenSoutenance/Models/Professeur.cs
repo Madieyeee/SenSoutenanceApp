@@ -1,7 +1,7 @@
-using APPSenSoutenance.Models;
+﻿using APPSenSoutenance.Models;
 using System.ComponentModel.DataAnnotations;
 
-namespace APPSenSoutenance.Models
+namespace AppSenSoutenance.Models
 {
     public class Professeur : Utilisateur
     {

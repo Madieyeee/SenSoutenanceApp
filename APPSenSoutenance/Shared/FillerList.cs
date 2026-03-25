@@ -1,9 +1,9 @@
-using AppSenSoutenance.Models;
+﻿using AppSenSoutenance.Models;
 using APPSenSoutenance.Models;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace APPSenSoutenance.Shared
+namespace AppSenSoutenance.Shared
 {
     public class FillerList
     {

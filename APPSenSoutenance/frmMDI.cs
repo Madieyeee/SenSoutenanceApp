@@ -1,27 +1,41 @@
-using APPSenSoutenance.Views.Parametre;
-using APPSenSoutenance.Shared;
+﻿using AppSenSoutenance.View.Paramètre;
 using APPSenSoutenance.Views.Account;
+using APPSenSoutenance.Views.Parametre;
 using Microsoft.VisualBasic.Devices;
 using System;
 using System.Drawing;
-using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 using System.Collections.Generic;
 
 namespace APPSenSoutenance
 {
+    /// <summary>
+    /// Formulaire principal MDI (Multiple Document Interface) de l'application
+    /// Gère l'affichage des formulaires enfants et la navigation
+    /// </summary>
     public partial class frmMDI : Form
-    {
-        public string profil;
-        private Button _activeNavBtn = null;
 
+    
+    {
+
+        /// <summary>
+        /// Profil de l'utilisateur connecté (Admin, User, etc.)
+        /// </summary>
+        
+        public string profil;
+
+        /// <summary>
+        /// Initialise une nouvelle instance du formulaire MDI
+        /// </summary>
         public frmMDI()
         {
             InitializeComponent();
         }
 
-        // ── Navigation helper ─────────────────────────────────────────
-        private void SetActiveButton(Button btn)
+        /// <summary>
+        ///Methode permettant de fermer toutes les fenetres enfants ouvertes
+        ///</summary>
+        private void fermer()
         {
             Form[] charr = this.MdiChildren;
 
@@ -84,7 +98,10 @@ namespace APPSenSoutenance
             f.WindowState = FormWindowState.Maximized;
         }
 
-        private void OpenForm(Form frm, Button navBtn)
+        /// <summary>
+        /// Ouvre le formulaire de gestion des professeurs
+        /// </summary>
+        private void professeurToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fermer();
             SetActiveButton(btnProfesseurs);
@@ -96,7 +113,11 @@ namespace APPSenSoutenance
             f.WindowState = FormWindowState.Maximized;
         }
 
-        private void fermer()
+
+        /// <summary>
+        /// Ouvre le formulaire de gestion des soutenances
+        /// </summary>
+        private void soutenanceToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fermer();
             SetActiveButton(btnSoutenances);
@@ -108,21 +129,11 @@ namespace APPSenSoutenance
             f.WindowState = FormWindowState.Maximized;
         }
 
-        // ── Chargement ───────────────────────────────────────────────
-        private void frmMDI_Load(object sender, EventArgs e)
+        /// <summary>
+        /// Ouvre le formulaire de gestion des mémoires
+        /// </summary>
+        private void memoireToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // Maximiser la fenêtre principal
-            //this.WindowState = FormWindowState.Maximized;
-
-            // Masquer sécurité sauf Admin ou Utilisateur identifié
-            //btnUtilisateur.Visible = false;
-            // Pour le moment on autorise l'affichage si profil est Utilisateur ou Admin
-            //if (profil == "Admin" || profil == "Utilisateur" || profil.Contains("Proxy"))
-                //btnUtilisateur.Visible = true;
-
-            // Mise à jour heure
-            //timerClock.Start();
-            //UpdateClock();
             fermer();
             SetActiveButton(btnMemoires);
             lblPageTitle.Text = "Gestion des Mémoires";
@@ -133,7 +144,10 @@ namespace APPSenSoutenance
             f.WindowState = FormWindowState.Maximized;
         }
 
-        private void UpdateClock()
+        /// <summary>
+        /// Ouvre le formulaire de gestion des chefs de département
+        /// </summary>
+        private void chefDeDepartementToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fermer();
             SetActiveButton(btnParametres);
