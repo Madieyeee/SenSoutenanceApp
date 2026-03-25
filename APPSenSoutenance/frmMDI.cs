@@ -86,7 +86,11 @@ namespace APPSenSoutenance
         // ── Navigation ───────────────────────────────────────────────
         private void btnAnneeAcademique_Click(object sender, EventArgs e)   => OpenForm(new frmAnneeAcademique(), (Button)sender);
         private void btnSession_Click(object sender, EventArgs e)           => OpenForm(new frmSession(), (Button)sender);
-        private void btnProfesseur_Click(object sender, EventArgs e)        => OpenForm(new frmProfesseur(), (Button)sender);
+        private void btnProfesseur_Click(object sender, EventArgs e)
+        {
+            try { OpenForm(new frmProfesseur(), (Button)sender); }
+            catch (Exception ex) { MessageBox.Show("Erreur critique: " + ex.Message + "\n" + ex.StackTrace); }
+        }
         private void btnSoutenance_Click(object sender, EventArgs e)        => OpenForm(new frmSoutenance(), (Button)sender);
         private void btnMemoire_Click(object sender, EventArgs e)           => OpenForm(new frmMemoire(), (Button)sender);
         private void btnChefDepartement_Click(object sender, EventArgs e)   => OpenForm(new frmChefDepartement(), (Button)sender);

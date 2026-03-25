@@ -99,5 +99,10 @@ namespace APPSenSoutenance.Views.Parametre
             txtMotDePasse.Clear();
             txtSpecialite.Text  = row.Cells[5].Value?.ToString() ?? "";
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            Filtrer();
+        }
     }
 }
