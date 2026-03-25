@@ -35,40 +35,48 @@ namespace APPSenSoutenance.Views.Parametre
             this.pnlRight.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-
+            // 
             // pnlHeader
+            // 
             this.pnlHeader.Controls.Add(this.lblHeaderTitle);
             this.pnlHeader.Controls.Add(this.lblHeaderSub);
+            this.pnlHeader.CornerRadius = 0;
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.GradientEnd = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(18)))), ((int)(((byte)(16)))));
+            this.pnlHeader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.pnlHeader.GradientStart = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(25)))), ((int)(((byte)(23)))));
-            this.pnlHeader.Height = 72;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1100, 72);
-
+            this.pnlHeader.Size = new System.Drawing.Size(1100, 93);
+            this.pnlHeader.TabIndex = 2;
+            // 
             // lblHeaderTitle
+            // 
             this.lblHeaderTitle.AutoSize = true;
             this.lblHeaderTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblHeaderTitle.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
-            this.lblHeaderTitle.ForeColor = DarkTheme.TextTitle;
+            this.lblHeaderTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(249)))));
             this.lblHeaderTitle.Location = new System.Drawing.Point(62, 10);
             this.lblHeaderTitle.Name = "lblHeaderTitle";
-            this.lblHeaderTitle.Size = new System.Drawing.Size(430, 41);
+            this.lblHeaderTitle.Size = new System.Drawing.Size(508, 41);
+            this.lblHeaderTitle.TabIndex = 0;
             this.lblHeaderTitle.Text = "Assignation Chefs de Département";
-
+            // 
             // lblHeaderSub
+            // 
             this.lblHeaderSub.AutoSize = true;
             this.lblHeaderSub.BackColor = System.Drawing.Color.Transparent;
             this.lblHeaderSub.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblHeaderSub.ForeColor = DarkTheme.TextSecondary;
-            this.lblHeaderSub.Location = new System.Drawing.Point(64, 38);
+            this.lblHeaderSub.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(162)))), ((int)(((byte)(158)))));
+            this.lblHeaderSub.Location = new System.Drawing.Point(64, 51);
             this.lblHeaderSub.Name = "lblHeaderSub";
-            this.lblHeaderSub.Size = new System.Drawing.Size(420, 25);
+            this.lblHeaderSub.Size = new System.Drawing.Size(366, 25);
+            this.lblHeaderSub.TabIndex = 1;
             this.lblHeaderSub.Text = "Gestion des responsabilités par département";
-
+            // 
             // pnlLeft
-            this.pnlLeft.BackColor = DarkTheme.BgCard;
+            // 
+            this.pnlLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(25)))), ((int)(((byte)(23)))));
             this.pnlLeft.Controls.Add(this.lblProf);
             this.pnlLeft.Controls.Add(this.cbbProfesseur);
             this.pnlLeft.Controls.Add(this.lblDept);
@@ -77,51 +85,59 @@ namespace APPSenSoutenance.Views.Parametre
             this.pnlLeft.Controls.Add(this.btnEdit);
             this.pnlLeft.Controls.Add(this.btnRemove);
             this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlLeft.Location = new System.Drawing.Point(0, 72);
+            this.pnlLeft.Location = new System.Drawing.Point(0, 93);
             this.pnlLeft.Name = "pnlLeft";
             this.pnlLeft.Padding = new System.Windows.Forms.Padding(20);
-            this.pnlLeft.Size = new System.Drawing.Size(360, 628);
-
+            this.pnlLeft.Size = new System.Drawing.Size(360, 607);
+            this.pnlLeft.TabIndex = 1;
+            // 
             // lblProf
+            // 
             this.lblProf.AutoSize = true;
             this.lblProf.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
-            this.lblProf.ForeColor = DarkTheme.TextSecondary;
+            this.lblProf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(162)))), ((int)(((byte)(158)))));
             this.lblProf.Location = new System.Drawing.Point(20, 20);
             this.lblProf.Name = "lblProf";
-            this.lblProf.Size = new System.Drawing.Size(124, 23);
+            this.lblProf.Size = new System.Drawing.Size(114, 23);
+            this.lblProf.TabIndex = 0;
             this.lblProf.Text = "PROFESSEUR";
-
+            // 
             // cbbProfesseur
-            this.cbbProfesseur.BackColor = DarkTheme.BgHover;
+            // 
+            this.cbbProfesseur.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(36)))));
             this.cbbProfesseur.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbbProfesseur.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbbProfesseur.ForeColor = DarkTheme.TextPrimary;
+            this.cbbProfesseur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(228)))));
             this.cbbProfesseur.Location = new System.Drawing.Point(20, 45);
             this.cbbProfesseur.Name = "cbbProfesseur";
             this.cbbProfesseur.Size = new System.Drawing.Size(320, 36);
             this.cbbProfesseur.TabIndex = 1;
-
+            // 
             // lblDept
+            // 
             this.lblDept.AutoSize = true;
             this.lblDept.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
-            this.lblDept.ForeColor = DarkTheme.TextSecondary;
+            this.lblDept.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(162)))), ((int)(((byte)(158)))));
             this.lblDept.Location = new System.Drawing.Point(20, 95);
             this.lblDept.Name = "lblDept";
-            this.lblDept.Size = new System.Drawing.Size(142, 23);
+            this.lblDept.Size = new System.Drawing.Size(131, 23);
+            this.lblDept.TabIndex = 2;
             this.lblDept.Text = "DÉPARTEMENT";
-
+            // 
             // cbbDepartement
-            this.cbbDepartement.BackColor = DarkTheme.BgHover;
+            // 
+            this.cbbDepartement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(36)))));
             this.cbbDepartement.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbbDepartement.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbbDepartement.ForeColor = DarkTheme.TextPrimary;
+            this.cbbDepartement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(228)))));
             this.cbbDepartement.Location = new System.Drawing.Point(20, 120);
             this.cbbDepartement.Name = "cbbDepartement";
             this.cbbDepartement.Size = new System.Drawing.Size(320, 36);
             this.cbbDepartement.TabIndex = 2;
-
+            // 
             // btnAdd
-            this.btnAdd.BackColor = DarkTheme.Amber;
+            // 
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(119)))), ((int)(((byte)(6)))));
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
@@ -133,14 +149,14 @@ namespace APPSenSoutenance.Views.Parametre
             this.btnAdd.Text = "Assigner";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-
+            // 
             // btnEdit
+            // 
             this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(37)))), ((int)(((byte)(36)))));
-            this.btnEdit.FlatAppearance.BorderSize = 1;
-            this.btnEdit.FlatAppearance.BorderColor = DarkTheme.Amber;
+            this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(119)))), ((int)(((byte)(6)))));
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnEdit.ForeColor = DarkTheme.Amber;
+            this.btnEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(119)))), ((int)(((byte)(6)))));
             this.btnEdit.Location = new System.Drawing.Point(20, 250);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(155, 40);
@@ -148,9 +164,10 @@ namespace APPSenSoutenance.Views.Parametre
             this.btnEdit.Text = "Modifier";
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
-
+            // 
             // btnRemove
-            this.btnRemove.BackColor = DarkTheme.Danger;
+            // 
+            this.btnRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.btnRemove.FlatAppearance.BorderSize = 0;
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRemove.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
@@ -162,21 +179,24 @@ namespace APPSenSoutenance.Views.Parametre
             this.btnRemove.Text = "Révoquer";
             this.btnRemove.UseVisualStyleBackColor = false;
             this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
-
+            // 
             // pnlRight
-            this.pnlRight.BackColor = DarkTheme.BgPrincipal;
+            // 
+            this.pnlRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(10)))), ((int)(((byte)(9)))));
             this.pnlRight.Controls.Add(this.dataGridView1);
             this.pnlRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlRight.Location = new System.Drawing.Point(360, 72);
+            this.pnlRight.Location = new System.Drawing.Point(360, 93);
             this.pnlRight.Name = "pnlRight";
             this.pnlRight.Padding = new System.Windows.Forms.Padding(16);
-            this.pnlRight.Size = new System.Drawing.Size(740, 628);
-
+            this.pnlRight.Size = new System.Drawing.Size(740, 607);
+            this.pnlRight.TabIndex = 0;
+            // 
             // dataGridView1
+            // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = DarkTheme.BgPrincipal;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(10)))), ((int)(((byte)(9)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -184,14 +204,17 @@ namespace APPSenSoutenance.Views.Parametre
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(708, 596);
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.Size = new System.Drawing.Size(708, 575);
             this.dataGridView1.TabIndex = 0;
-
+            // 
             // frmChefDepartement
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = DarkTheme.BgPrincipal;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(10)))), ((int)(((byte)(9)))));
             this.ClientSize = new System.Drawing.Size(1100, 700);
+            this.ControlBox = false;
             this.Controls.Add(this.pnlRight);
             this.Controls.Add(this.pnlLeft);
             this.Controls.Add(this.pnlHeader);
